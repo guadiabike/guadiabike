@@ -1,0 +1,89 @@
+{% extends "_template/base-page.html" %}
+
+{% load i18n %}
+{% load binky_calendar %}
+
+{% block content %}
+
+    <main>
+
+    {% if nextruta %}
+
+        <div class="ui-fluid-container" role="main">
+            <div class="c1 " style="text-align: center;">
+
+                <div class="g-medium--full clear bk-box ui-ppp-tb">
+                    <div class="ui-third" style="margin-top: 15%;">
+                        <span class="ui-block">{{ nextruta.hora |date:"H:i d.m.y" }}</span>
+                        <span class="ui-color-high ui-block ui-uppercase">{{ nextruta.eventoTipo }}</span>
+                    </div>
+                    <div class="ui-third">
+                        <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}">
+                    </div>
+                    <div class="ui-third ui-last" style="margin-top: 15%;">
+                        <span class="ui-large ui-color-high"></span>
+                    </div>
+                </div>
+
+
+                <div class="clear bk-box-info ">
+                    <div class="ui-third">
+                        <span class="ui-large ui-color-high">{{ nextruta.ruta.calorias }}</span>
+                        <span class="ui-small ui-uppercase">calorías</span>
+                    </div>
+                    <div class="ui-third">
+                        <span class="ui-large ui-color-high">{{ nextruta.ruta.dificultad }}</span>
+                        <span class="ui-small ui-uppercase">dificultad</span>
+
+                    </div>
+                    <div class="ui-third ui-last">
+                        <span class="ui-large ui-color-high">{{ nextruta.ruta.distancia }}</span>
+                        <span class="ui-small ui-uppercase">kilómetros</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="c2 clear bk-box">
+
+                <div class="bk-title">INFORMACIÓN DE RUTA</div>
+
+                <div class="bk-content">
+                    <span class="ui-color-soft">Tipo</span><span class="ui-fr">{{ nextruta.eventoTipo }}</span>
+                </div>
+                <div class="bk-content pair">
+                    <span class="ui-color-soft">Nombre</span><span class="ui-fr">{{ nextruta.ruta.nombre }}</span>
+                </div>
+                <div class="bk-content">
+                    <span class="ui-color-soft">Dificultad</span><span class="ui-fr">{{ nextruta.ruta.dificultad }}</span>
+                </div>
+                <div class="bk-content pair">
+                    <span class="ui-color-soft">Duración est.</span><span class="ui-fr">{{ nextruta.ruta.tiempoFormateado }}</span>
+                </div>
+                <div class="bk-content">
+                    <span class="ui-color-soft">Desnivel est.</span><span class="ui-fr">{{ nextruta.ruta.desnivelAcumuladoFormateado }}</span>
+                </div>
+
+                <div class="bk-title">COMENTARIO</div>
+
+                <div class="bk-content">
+                    {% if nextruta.comentario %}
+                    <span class="ui-color-soft">{{ nextruta.comentario }}</span>
+                    {% else %}
+                    <span class="ui-color-soft">No hay comentarios para esta ruta</span>
+                    {% endif %}
+                </div>
+
+                <div class="bk-title">RECORRIDO</div>
+
+                <div class="bk-content pair">
+                    <span class="ui-color-soft">{{ nextruta.ruta.descripcion }}</span>
+                </div>
+
+            </div>
+        </div>
+
+    {% endif %}
+
+    </main>
+
+{% endblock %}

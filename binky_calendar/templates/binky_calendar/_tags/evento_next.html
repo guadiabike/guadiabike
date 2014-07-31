@@ -1,0 +1,77 @@
+{% load staticfiles %}
+
+{% if nextruta %}
+
+    <div class="bk-main-section">
+
+        <div class="bk-title">PRÓXIMA SALIDA</div>
+
+        <div class="bk-content ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+
+                        <div class="ui-ppp" style="width: 62px;"><img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}"></div>
+
+                    </div>
+                    <div class="ui-table-cell bk-c2">
+
+                        <div class="ui-ppp">
+                        <span class="ui-large ui-color-high ui-block">{{ nextruta.ruta.nombre }}</span>
+                        <span class="ui-small ui-color-title ui-block">{{ nextruta.eventoTipo }}, dificultad {{ nextruta.ruta.dificultad }}</span>
+                        <br>
+                        <span class="ui-small ui-color-soft">Distancia estimada: </span><span class="ui-small ui-color-high">{{ nextruta.ruta.distancia }} kms</span><br>
+                        <span class="ui-small ui-color-soft">Duración estimada: </span><span class="ui-small ui-color-high">{{ nextruta.ruta.tiempoFormateado }}</span>
+                        </div>
+
+                    </div>
+                    <div class="ui-table-cell bk-c3">
+
+                        <div class="ui-ppp">
+                        <i class="icon icon-chevron-right"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-table">
+            <div class="ui-table-row">
+                <div class="ui-table-cell bk-info ui-block-50">{{ nextruta.tiempoRestante }}</div>
+                <div class="ui-table-cell bk-info ui-block-50 bk-separator ui-clickeable" >
+                    {{ nAsistentes }} asistentes
+                </div>
+            </div>
+        </div>
+
+        <div class="bk-content ui-table">
+            <div class="ui-table-row">
+                <div class="ui-table-cell bk-info">
+                    <span class="ui-block">¿Deseas confirmar asistencia a ruta?</span>
+                    <span>
+                        <a class="button--primary" onclick="bk_calendar_eventoAsiste('{{ nextruta.id }}', '{{ request.user.id }}', 1)">Si</a>
+                    </span>
+                    <span>
+                        <a class="button--primary" onclick="bk_calendar_eventoAsiste('{{ nextruta.id }}', '{{ request.user.id }}', 0)">No</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+    function bk_calendar_eventoAsiste(eventoId, userId, asisteParam) {
+        $.get('{% url 'calendar:evento_asiste' %}', {evento_id: eventoId, user_id: userId, asiste: asisteParam}, function(data){
+            alert(data);
+        });
+    }
+    $(document).ready(function() { });
+    </script>
+
+{% endif %}

@@ -1,0 +1,10 @@
+- model: binky_calendar.EventoTipo
+  pk: 1
+  fields:
+    nombre: Entrenamiento
+    descripcion: Entrenamiento semanal
+- model: binky_calendar.EventoTipo
+  pk: 2
+  fields:
+    nombre: Salida
+    descripcion: Salida regular

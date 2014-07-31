@@ -1,0 +1,104 @@
+- model: binky_calendar.Ruta
+  pk: 1
+  fields:
+    nombre: 50 KMs
+    descripcion: Sanlúcar - O - Sanlúcar
+    imagen_principal: binky_calendar/ruta/50.png
+    tiempo: 150
+    distancia: 50
+    desnivel_acumulado: 300
+    modalidad: 1
+    dificultad: 2
+    calorias: 1200
+    uuser: 1
+- model: binky_calendar.Ruta
+  pk: 2
+  fields:
+    nombre: 60 KMs
+    descripcion: Sanlúcar - O - Sanlúcar
+    imagen_principal: binky_calendar/ruta/60.png
+    tiempo: 150
+    distancia: 60
+    desnivel_acumulado: 300
+    modalidad: 1
+    dificultad: 2
+    calorias: 1200
+    uuser: 1
+- model: binky_calendar.Ruta
+  pk: 3
+  fields:
+    nombre: 70 KMs
+    descripcion: Sanlúcar - O - Sanlúcar
+    imagen_principal: binky_calendar/ruta/70.png
+    tiempo: 150
+    distancia: 70
+    desnivel_acumulado: 300
+    modalidad: 1
+    dificultad: 2
+    calorias: 1200
+    uuser: 1
+- model: binky_calendar.Ruta
+  pk: 4
+  fields:
+    nombre: ALMONTE
+    descripcion: Sanlúcar - Huevar - Pilas - Hinojos - ALMONTE - Hinojos - Villamanrique - Pilas - Aznalcázar - Benacazón - Sanlúcar
+    imagen_principal: binky_calendar/ruta/ALMONTE.png
+    tiempo: 240
+    distancia: 88
+    desnivel_acumulado: 500
+    modalidad: 1
+    dificultad: 2
+    calorias: 1800
+    uuser: 1
+- model: binky_calendar.Ruta
+  pk: 5
+  fields:
+    nombre: LAS PAJANOSAS
+    descripcion: Sanlúcar - Aznalcóllar - Gerena - El Garrobo - LAS PAJANOSAS - Santiponce - Castilleja de Guzmán - Valencina - Gines - Espartinas - Sanlúcar
+    imagen_principal: binky_calendar/ruta/LAS_PAJANOSAS.png
+    tiempo: 260
+    distancia: 93
+    desnivel_acumulado: 500
+    modalidad: 1
+    dificultad: 2
+    calorias: 1900
+    uuser: 1
+- model: binky_calendar.Ruta
+  pk: 6
+  fields:
+    nombre: CHUCENA
+    descripcion: Sanlúcar - Benacazón - Aznalcázar - Pilas - Hinojos - CHUCENA - Escacena - Paterna - Manzanilla - Villalba (circunvalación) - Villalba (pueblo) - Manzanilla - Castilleja - Sanlúcar
+    imagen_principal: binky_calendar/ruta/CHUCENA.png
+    tiempo: 230
+    distancia: 82
+    desnivel_acumulado: 500
+    modalidad: 1
+    dificultad: 2
+    calorias: 1750
+    uuser: 1
+- model: binky_calendar.Ruta
+  pk: 7
+  fields:
+    nombre: ISLA MAYOR
+    descripcion: Sanlúcar - Umbrete - Bollullos de la Mitación - Almensilla - Coria - Puebla - ISLA MAYOR - Villamanrique - Pilas - Huevar - Sanlúcar
+    imagen_principal: binky_calendar/ruta/ISLA_MAYOR.png
+    tiempo: 260
+    distancia: 96
+    desnivel_acumulado: 500
+    modalidad: 1
+    dificultad: 2
+    calorias: 1920
+    uuser: 1
+- model: binky_calendar.Ruta
+  pk: 8
+  fields:
+    nombre: AZNALCÓLLAR
+    descripcion: Sanlúcar - AZNALCÓLLAR - Sanlúcar
+    imagen_principal: binky_calendar/ruta/AZNALCOLLAR.png
+    tiempo: 180
+    distancia: 75
+    desnivel_acumulado: 1130
+    modalidad: 1
+    dificultad: 3
+    calorias: 1900
+    uuser: 1

@@ -1,0 +1,64 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+	{% block style %}
+	<!-- CSS -->
+	    <link type="text/css" href="{{ STATIC_URL }}theme/simple/style.css" rel="stylesheet" />
+	{% endblock %}
+	
+	{% block extrastyle %}{% endblock %}
+	
+	{% block js %}
+    <!-- JS Libraries -->
+	{% endblock %}
+
+	{% block extrajs %}{% endblock %}
+	
+    <title>{% block title %}{% endblock %}</title>
+    
+	{% block blockbots %}
+	<meta name="robots" content="NONE,NOARCHIVE" />
+	{% endblock %}
+</head>
+
+<body {% block bodyattr %}{% endblock %}>
+	<div class="ui-borderlayout">
+		
+		<div class="north">
+	  		{% block menu %}{% endblock %}
+	  	</div >
+	  	
+		<div class="east">
+			{% block east %}{% endblock %}
+		</div>
+			  	
+		<div class="center">
+
+			{% block breadcrumbs %} {% endblock %}
+
+			{% if message_info %}
+			<div class="ui-state-highlight"> 
+				<p>{{ message_info }}</p>
+			</div>
+			{% endif %}
+			
+			{% if message_error %}		
+			<div class="ui-state-error"> 
+				<p>{{ message_error }}</p>
+			</div>
+			{% endif %}
+						
+			<div>
+				<div class="ui-content-block">
+				{% block content %}{% endblock %}
+				</div>
+				<br class="ui-clear-both">
+			</div>
+
+		</div>
+	
+	</div>
+</body>
+</html>

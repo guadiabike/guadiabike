@@ -1,0 +1,40 @@
+{% extends "_template/base.html" %}
+
+{% load i18n %}
+
+{% block header %}
+
+    <header class="app-bar promote-layer">
+      <div class="app-bar-container">
+        <button class="menu"><img src="{{ STATIC_URL }}images/hamburger.svg" alt="Menu"></button>
+        <h1 class="logo">Guadiabike</h1>
+        <section class="app-bar-actions">
+        <!-- Put App Bar Buttons Here -->
+        </section>
+      </div>
+    </header>
+
+{% endblock %}
+
+{% block nav %}
+
+    <nav class="navdrawer-container promote-layer">
+      <h4>Menú</h4>
+      <ul>
+        <li><a href="{% url 'home' %}">Inicio</a></li>
+        <li><a href="#Calendario">Calendario</a></li>
+
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% endif %}
+
+      </ul>
+    </nav>
+
+{% endblock %}
+
+{% block extrascripts %}
+
+    <script src="{{ STATIC_URL }}scripts/main.js"></script>
+
+{% endblock %}

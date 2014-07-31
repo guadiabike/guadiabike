@@ -1,0 +1,10 @@
+- model: guadiabike.Modalidad
+  pk: 1
+  fields:
+    nombre: BTT
+    descripcion: Ciclismo de montaña
+- model: guadiabike.Modalidad
+  pk: 2
+  fields:
+    nombre: Carretera
+    descripcion: Ciclismo de carretera

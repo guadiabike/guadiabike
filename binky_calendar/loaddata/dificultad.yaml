@@ -1,0 +1,20 @@
+- model: binky_calendar.Dificultad
+  pk: 1
+  fields:
+    nombre: Baja
+    descripcion: Ruta para disfrutar por cualquier ciclista
+- model: binky_calendar.Dificultad
+  pk: 2
+  fields:
+    nombre: Media
+    descripcion: Ruta con bajo nivel técnico
+- model: binky_calendar.Dificultad
+  pk: 3
+  fields:
+    nombre: Alta
+    descripcion: Ruta con nivel técnico alto
+- model: binky_calendar.Dificultad
+  pk: 4
+  fields:
+    nombre: Muy alta
+    descripcion: Ruta muy exigente indicada exclusivamente para ciclistas experimentados

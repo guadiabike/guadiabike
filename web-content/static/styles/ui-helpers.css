@@ -1,0 +1,77 @@
+/*
+ * Responsive style
+ *
+ * Author: Antonio Hermosilla Parra
+ */
+
+/* USER INTERFACE COMMON - HELPERS
+ -------------------------------------------------------------------------------------------------------- */
+
+
+/* TABLES */
+
+.ui-table { display: table; }
+.ui-table-row { display: table-row; }
+.ui-table-cell { display: table-cell; }
+
+/* PADDING */
+
+.ui-ppp-tb  { padding-top: 10px; padding-bottom: 10px; }
+.ui-pp-tb   { padding-top: 5px; padding-bottom: 5px; }
+.ui-p-tb    { padding-top: 2px; padding-bottom: 2px; }
+
+.ui-ppp     { padding: 10px; }
+.ui-pp      { padding: 5px; }
+.ui-p       { padding: 2px; }
+
+.ui-ppp-l   { padding-left: 10px; }
+.ui-pp-l    { padding-left: 5px; }
+.ui-p-l     { padding-left: 2px; }
+
+.ui-ppp-r   { padding-right: 10px; }
+.ui-pp-r    { padding-right: 5px; }
+.ui-p-r     { padding-right: 2px; }
+
+/* BLOCKS */
+
+.ui-block-50    { width: 50%; }
+.ui-clear-both  { clear:both; }
+.ui-block       {display:block;}
+.ui-clickeable  { cursor: pointer; cursor: hand; }
+
+.ui-nodecoration { text-decoration: none; color: white; }
+
+
+.ui-fr      { float: right; }
+.ui-fl      { float: left; }
+
+/* TIPOGRAPHY */
+
+.ui-large   { font-size: 1.2em; }
+.ui-small   { font-size: 0.7em; }
+.ui-minimum { font-size: 0.5em; }
+
+.ui-uppercase   {text-transform:uppercase;}
+.ui-lowercase   {text-transform:lowercase;}
+.ui-capitalize  {text-transform:capitalize;}
+
+.ui-third   { float: left; margin-right: 0.5%; width: 33%; }
+.ui-last    { margin-right: 0; }
+
+/* MOBILE - COMMON
+ -------------------------------------------------------------------------------------------------------- */
+
+.ui-fluid-container { display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap;  }
+.ui-fluid-container .c1, .ui-fluid-container .c2, .ui-fluid-container .c3,
+.ui-fluid-container .c4, .ui-fluid-container .c5 { width: 100%; }
+
+/* PC - FULL SIZE
+ -------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 800px) {
+
+.ui-fluid-container .c1 { width: 40%; }
+.ui-fluid-container .c2 { width: 60%; }
+.ui-fluid-container .c3, .ui-fluid-container .c4, .ui-fluid-container .c5 { width: 33.33%; }
+
+}
