@@ -50,3 +50,4 @@ def binky_calendar_evento_asiste(request):
         response = ''
 
     return HttpResponse(response)
+
