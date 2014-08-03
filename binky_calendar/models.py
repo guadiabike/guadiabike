@@ -43,7 +43,7 @@ class Ruta(models.Model):
     modalidad = models.ForeignKey(Modalidad)
     dificultad = models.ForeignKey(Dificultad)
     calorias = models.PositiveIntegerField(help_text='Calorías consumidas en kilocalorías.', null=True)
-    mapa_url = models.CharField(help_text='Dirección URL del mapa.', max_length=1000, null=True)
+    mapa_url = models.CharField(help_text='Dirección URL del mapa.', max_length=1000, null=True, blank=True)
     udate = models.DateField(default=datetime.now(), editable=False)
     uuser = models.ForeignKey(User, default=1, editable=False)
     uinformation = models.CharField(default='LOADDATA', max_length=200, editable=False)
@@ -64,7 +64,7 @@ class Ruta(models.Model):
             return "!"
 
     def __unicode__(self):
-        return self.nombre + ' [' + str(self.distancia) + ' kms]'
+        return u"%s %s kms" % (self.nombre,self.distancia)
 
     class Meta:
         verbose_name = 'Ruta'
@@ -103,7 +103,7 @@ class Evento(models.Model):
     actived = models.BooleanField(default=True, editable=False)
 
     def __unicode__(self):
-        return str(self.eventoTipo) + ' - ' + str(self.ruta)
+        return u"%s %s" % (self.eventoTipo,self.ruta)
 
     def tiempoRestante(self):
         try:

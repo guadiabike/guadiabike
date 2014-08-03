@@ -76,7 +76,14 @@
                 <div class="bk-title">RECORRIDO</div>
 
                 <div class="bk-content pair">
-                    <span class="ui-color-soft">{{ nextruta.ruta.descripcion }}</span>
+
+                    {% if nextruta.ruta.mapa_url %}
+                    <iframe frameBorder="0" src="{{ nextruta.ruta.mapa_url }}"
+                            width="100%" height="400">
+
+                    </iframe>
+                    {% endif %}
+
                 </div>
 
             </div>
