@@ -44,6 +44,10 @@ textarea { border: 0px; background-color: transparent; width: 100%; resize: none
 .bk-box-error { margin: 10px; }
 .bk-box-error li { color: #adde6a; font-size: 12px; }
 
+/* LOGIN */
+.bk-login input[type='text'], input[type='password'] { border: 1px solid gray; width: 200px; background-color: #e6e6e6;}
+
+
 /* PC - FULL SIZE
  -------------------------------------------------------------------------------------------------------- */
 
