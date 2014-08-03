@@ -1,6 +1,7 @@
 {% extends "_template/base.html" %}
 
 {% load i18n %}
+{% load security %}
 
 {% block header %}
 
@@ -23,6 +24,10 @@
       <ul>
         <li><a href="{% url 'home' %}">Inicio</a></li>
         <li><a href="#Calendario">Calendario</a></li>
+
+        {% if request.user|has_group:'administradores' %}
+            <li><a href="{% url 'administration:admin_index' %}">Administración</a></li>
+        {% endif %}
 
         {% if user.is_authenticated %}
         <li><a href="{% url 'logout' %}">Logout</a></li>

@@ -1,0 +1,165 @@
+{% extends "_template/base-page.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+
+{% block content %}
+
+<main>
+
+
+    <div class="bk-main-section">
+
+        <div class="bk-title">USUARIOS Y GRUPOS</div>
+
+        <div class="bk-content ui-clickeable" onclick="location.href='{% url 'administration:admin_user_invitation' %}'" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Nueva invitación</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Usuarios</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Grupos</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+    </div>
+
+    <div class="bk-main-section">
+
+        <div class="bk-title">CONFIGURACIÓN DEL SITIO</div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Información del sitio</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Administración de temas</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Mantenimiento</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Rendimiento</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Sistema de ficheros</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+        <div class="bk-content ui-clickeable" onclick="#" >
+
+            <div class="ui-table">
+                <div class="ui-table-row">
+                    <div class="ui-table-cell bk-c1">
+                        <div class="ui-ppp" style="width: 20px;"><i class="icon icon-diamond"></i></div>
+                    </div>
+                    <div class="ui-table-cell bk-c2"><div class="ui-ppp"><span class="ui-large ui-color-high ui-block">Mensajes y alertas</span></div></div>
+                    <div class="ui-table-cell bk-c3"><div class="ui-ppp"><i class="icon icon-chevron-right"></i></div></div>
+                </div>
+
+            </div>
+            <div class="ui-clear-both"></div>
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+
+</script>
+
+{% endblock %}

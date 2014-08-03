@@ -39,7 +39,7 @@ def login(request):
             else:
                 #return render_to_response('accounts/login.html')
                 # Return a 'disabled account' error message
-                return HttpResponse("disabled account")
+                return redirect('home')
         else:
             form = AuthenticationForm(data=request.POST)
             form.is_valid()

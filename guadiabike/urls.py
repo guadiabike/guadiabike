@@ -25,4 +25,8 @@ urlpatterns = patterns('',
 
     url(r'^calendar/', include('binky_calendar.urls', namespace='calendar')),
 
+    # Administration - binky_admin
+
+    url(r'^administration/', include('binky_admin.urls', namespace='administration')),
+
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,27 @@
+{% extends "_template/base-page.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+
+{% block content %}
+
+<main>
+
+     <div class="ui-block ui-ppp-tb"></div>
+     <div class="clear bk-box ">
+
+        <div class="bk-title">INFORMACIÓN</div>
+
+        <div class="bk-content">
+            <span class="ui-color-soft">{{ message }} </span>
+        </div>
+
+        <div class="bk-title"><a href="{% url 'administration:admin_index' %}" class="button--primary" >Aceptar</a></div>
+
+    </div>
+
+
+</main>
+
+{% endblock %}

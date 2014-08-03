@@ -1,0 +1,52 @@
+{% extends "_template/base-page.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+
+{% block content %}
+
+<main>
+
+    <form method="post" action="{% url 'administration:admin_user_invitation' %}">
+
+        {% if formulario.errors %}
+            <div class="bk-box-error">
+                {{ formulario.correo.errors }}
+            </div>
+        {% endif %}
+
+        {% csrf_token %}
+         <div class="ui-block ui-ppp-tb"></div>
+         <div class="clear bk-box ">
+
+            <div class="bk-title">INVITACION DE USUARIO</div>
+
+            <div class="bk-content">
+                <span class="ui-color-soft">{{ formulario.nombre.label }} </span>
+            </div>
+            <div class="bk-content pair">
+                <span class="ui-color-soft">{{ formulario.nombre }}</span>
+            </div>
+            <div class="bk-content">
+                <span class="ui-color-soft">{{ formulario.correo.label }} </span>
+            </div>
+            <div class="bk-content pair">
+                <span class="ui-color-soft">{{ formulario.correo }}</span>
+            </div>
+            <div class="bk-content">
+                <span class="ui-color-soft">{{ formulario.mensaje.label }} </span>
+            </div>
+            <div class="bk-content pair">
+                <span class="ui-color-soft">{{ formulario.mensaje }}</span>
+            </div>
+
+            <div class="bk-title"><input type="submit" value="Enviar" class="button--primary"/></div>
+
+        </div>
+
+    </form>
+
+</main>
+
+{% endblock %}
