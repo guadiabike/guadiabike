@@ -43,6 +43,7 @@ class Ruta(models.Model):
     modalidad = models.ForeignKey(Modalidad)
     dificultad = models.ForeignKey(Dificultad)
     calorias = models.PositiveIntegerField(help_text='Calorías consumidas en kilocalorías.', null=True)
+    mapa_url = models.CharField(help_text='Dirección URL del mapa.', max_length=1000, null=True)
     udate = models.DateField(default=datetime.now(), editable=False)
     uuser = models.ForeignKey(User, default=1, editable=False)
     uinformation = models.CharField(default='LOADDATA', max_length=200, editable=False)

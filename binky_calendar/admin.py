@@ -42,6 +42,9 @@ class RutaAdmin(admin.ModelAdmin):
         ('Datos del recorrido', {
             'fields': ('tiempo', 'distancia', 'desnivel_acumulado', 'dificultad', 'calorias', ),
         }),
+        ('Mapa', {
+            'fields': ('mapa_url', ),
+        }),
     )
     ordering = ('id',)
 

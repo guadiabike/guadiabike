@@ -19,6 +19,7 @@ class EventoNextNode(Node):
         self.template = templ
 
     def render(self, context):
+        nAsistentes = 0
         try:
             # Obtenemos la siguiente ruta reciente.
             p = Evento.objects.filter(hora__gte=datetime.datetime.now())[0]
