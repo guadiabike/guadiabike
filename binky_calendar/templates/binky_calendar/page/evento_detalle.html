@@ -73,9 +73,21 @@
                     {% endif %}
                 </div>
 
+                <div class="bk-title">PERFIL</div>
+
+                <div class="bk-content">
+
+                    {% if nextruta.ruta.imagen_perfil %}
+                        <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_perfil }}" width="100%">
+                    {%  else %}
+                        <span class="ui-color-soft">No existe información de perfil.</span>
+                    {% endif %}
+
+                </div>
+
                 <div class="bk-title">RECORRIDO</div>
 
-                <div class="bk-content pair">
+                <div class="bk-content">
 
                     {% if nextruta.ruta.mapa_url %}
                         <iframe frameBorder="0" src="{{ nextruta.ruta.mapa_url }}"
