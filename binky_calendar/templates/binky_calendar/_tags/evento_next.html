@@ -49,14 +49,10 @@
 
         <div class="bk-content ui-table">
             <div class="ui-table-row">
-                <div class="ui-table-cell bk-info">
-                    <span class="ui-block">¿Deseas confirmar asistencia a ruta?</span>
-                    <span>
-                        <a class="button--primary" onclick="bk_calendar_eventoAsiste('{{ nextruta.id }}', '{{ request.user.id }}', 1)">Si</a>
-                    </span>
-                    <span>
-                        <a class="button--primary" onclick="bk_calendar_eventoAsiste('{{ nextruta.id }}', '{{ request.user.id }}', 0)">No</a>
-                    </span>
+                <div id="bk_evento_next_ruta_{{ nextruta.id }}" class="ui-table-cell bk-info">
+
+                    {% include "binky_calendar/_ajax/evento_next_asistencia.html" %}
+
                 </div>
             </div>
         </div>
@@ -68,7 +64,7 @@
     <script>
     function bk_calendar_eventoAsiste(eventoId, userId, asisteParam) {
         $.get('{% url 'calendar:evento_asiste' %}', {evento_id: eventoId, user_id: userId, asiste: asisteParam}, function(data){
-            alert(data);
+            $('#bk_evento_next_ruta_' + eventoId).html(data);
         });
     }
     $(document).ready(function() { });

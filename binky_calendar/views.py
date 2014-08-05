@@ -15,7 +15,7 @@ def binky_calendar_evento_detalle(request, evento_id):
     except Exception:
         p = None
 
-    return render(request, 'binky_calendar/page/evento_detalle.html', {'nextruta': p })
+    return render(request, 'binky_calendar/page/evento_detalle.html', {'nextruta': p})
 
 
 # AJAX VIEWS
@@ -25,18 +25,29 @@ def binky_calendar_evento_detalle(request, evento_id):
 @login_required
 def binky_calendar_evento_asiste(request):
 
+    confirmado = True
+    asiste = False
+
     try:
         evento_id = request.GET['evento_id']
         user_id = request.GET['user_id']
-        asiste = False
+
         if request.GET['asiste'] == '1':
             asiste = True
+
+        if request.GET['asiste'] == '2':
+            borrado = True
 
         # Comprobamos si el evento existe.
         try:
             asistencia = AsisteEvento.objects.get(user_id=user_id, evento_id=evento_id)
             asistencia.asiste = asiste
-            asistencia.save()
+            if borrado:
+                asistencia.delete()
+                confirmado = False
+            else:
+                asistencia.save()
+
         except AsisteEvento.DoesNotExist:
             asistencia = AsisteEvento()
             asistencia.user_id = user_id
@@ -44,10 +55,7 @@ def binky_calendar_evento_asiste(request):
             asistencia.asiste = asiste
             asistencia.save()
 
-        response = 'Agregado correctamente.'
-
     except Exception:
-        response = ''
+        confirmado = False
 
-    return HttpResponse(response)
-
+    return render(request, 'binky_calendar/_ajax/evento_next_asistencia.html', { 'evento_id': evento_id, 'confirmado': confirmado, 'asiste': asiste})

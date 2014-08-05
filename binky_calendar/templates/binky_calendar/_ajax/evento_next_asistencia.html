@@ -1,0 +1,19 @@
+{% if confirmado %}
+
+    {% if asiste %}
+        <i class="icon icon-tick"></i><span class="ui-ppp-l bk-color-primary">Ha confirmado su asistencia.</span>
+    {% else %}
+        <i class="icon icon-cog"></i><span class="ui-ppp-l bk-color-secondary">Ha confirmado que no asistirá.</span>
+    {% endif %}
+        <span class="ui-clickeable" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 2)">Deshacer</span>
+{% else %}
+
+    <span class="ui-block">¿Deseas confirmar asistencia a ruta?</span>
+    <span>
+        <a class="button--primary ui-clickeable" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 1)">Si</a>
+    </span>
+    <span>
+        <a class="button--primary ui-clickeable" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 0)">No</a>
+    </span>
+
+{% endif %}
