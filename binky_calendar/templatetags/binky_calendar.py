@@ -22,14 +22,16 @@ class EventoNextNode(Node):
         nAsistentes = 0
         confirmado = False
         asiste = False
+        evento_id = None
         try:
             # Obtenemos la siguiente ruta reciente.
             p = Evento.objects.filter(hora__gte=datetime.datetime.now())[0]
-            nAsistentes = len(AsisteEvento.objects.filter(evento_id=p.id, asiste=True))
+            evento_id = p.id
+            nAsistentes = len(AsisteEvento.objects.filter(evento_id=evento_id, asiste=True))
 
             # Comprobamos si el evento existe.
             try:
-                asistencia = AsisteEvento.objects.get(user_id=context['request'].user.id, evento_id=p.id)
+                asistencia = AsisteEvento.objects.get(user_id=context['request'].user.id, evento_id=evento_id)
                 confirmado = True
                 asiste = asistencia.asiste
             except AsisteEvento.DoesNotExist:
@@ -40,7 +42,8 @@ class EventoNextNode(Node):
 
         t = template.loader.get_template(self.template)
 
-        context.update({'nextruta': p, 'evento_id': p.id, 'nAsistentes': nAsistentes, 'confirmado': confirmado, 'asiste': asiste})
+        context.update({'nextruta': p, 'evento_id': evento_id, 'nAsistentes': nAsistentes, 'confirmado': confirmado,
+                        'asiste': asiste})
 
         return t.render(context)
 

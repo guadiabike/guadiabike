@@ -2,7 +2,7 @@
 
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import datetime, date, time, timedelta
+from datetime import datetime
 from guadiabike.models import Modalidad
 from django.utils import timezone
 

@@ -1,0 +1,78 @@
+{% extends "_template/base-page.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+
+{% block content %}
+
+<main>
+
+    {% if invitacion_activa %}
+
+    <form method="post" action="{% url 'user:user_invitation' uuid %}">
+
+        {% csrf_token %}
+
+
+        <div class="bk-box">
+            <div class="info">
+                <p class="title">¡Bienvenido {{ formulario.nombre.value }}!</p>
+                <p class="">Ha recibido una invitación para Guadiabike BTT.</p>
+                <p>Por favor, introduzca una contraseña para {{ formulario.correo.value }}</p>
+            </div>
+        </div>
+
+        {% if formulario.errors %}
+        <div class="bk-box">
+            <div class="danger">
+                <p>Por favor, rellena correctamente la información.</p>
+                {{ formulario.errors.correo }}
+                {{ formulario.errors.password }}
+                {{ formulario.errors.repassword }}
+            </div>
+        </div>
+        <div class="ui-clear-both"></div>
+        {% endif %}
+
+        <div class="clear bk-box ">
+
+            <div class="bk-title">INVITACION PARA {{ formulario.nombre.value }}</div>
+
+            <div class="bk-content">
+                <span class="bk-color-soft">{{ formulario.password.label }} </span>
+            </div>
+            <div class="bk-content pair">
+                <span class="bk-color-high">{{ formulario.password }}</span>
+            </div>
+            <div class="bk-content">
+                <span class="bk-color-soft">{{ formulario.repassword.label }} </span>
+            </div>
+            <div class="bk-content pair">
+                <span class="bk-color-high">{{ formulario.repassword }}</span>
+            </div>
+
+            <div class="bk-title"><input type="submit" value="Enviar" class="button--primary"/></div>
+
+            <!-- HIDDEN FIELDS -->
+            {{ formulario.nombre }}
+            {{ formulario.correo }}
+
+        </div>
+
+    </form>
+
+    {% else %}
+
+    <div class="bk-box">
+        <div class="text">
+            <p class="title">¡Lo sentimos {{ formulario.nombre.value }}!</p>
+            <p>Su invitación para {{ formulario.correo.value }} ha caducado o ha sido utilizada con anterioridad.</p>
+        </div>
+    </div>
+
+    {% endif %}
+
+</main>
+
+{% endblock %}

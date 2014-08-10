@@ -58,6 +58,8 @@
 .ui-third   { float: left; margin-right: 0.5%; width: 33%; }
 .ui-last    { margin-right: 0; }
 
+.ui.bold    { font-weight: bold; }
+
 /* MOBILE - COMMON
  -------------------------------------------------------------------------------------------------------- */
 

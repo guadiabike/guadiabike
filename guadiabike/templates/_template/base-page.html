@@ -23,7 +23,6 @@
       <h4>Menú</h4>
       <ul>
         <li><a href="{% url 'home' %}">Inicio</a></li>
-        <li><a href="#Calendario">Calendario</a></li>
 
         {% if request.user|has_group:'administradores' %}
             <li><a href="{% url 'administration:admin_index' %}">Administración</a></li>

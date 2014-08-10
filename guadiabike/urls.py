@@ -29,4 +29,8 @@ urlpatterns = patterns('',
 
     url(r'^administration/', include('binky_admin.urls', namespace='administration')),
 
+    # Usuarios - binky_user
+
+    url(r'^user/', include('binky_user.urls', namespace='user')),
+
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

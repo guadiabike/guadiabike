@@ -29,7 +29,7 @@ class MailTemplate(object):
             <tr><td style="padding-top: 10px; padding-bottom: 10px; font-size: 24px; "><p>%titulo%</p></td></tr>
             <tr><td>
                 <div style="border: 1px solid grey; padding: 20px; background-color: white;">
-                    %cuerpo%
+                    %contenido%
                 </div>
             </td></tr>
             <tr><td>
@@ -61,7 +61,7 @@ class InvitationMail(MailTemplate):
         self.url = url
         self.contenido = self.getContenido()
 
-        super(MailTemplate, self).__init__('Invitación en Guadiabike BTT', self.contenido)
+        super(InvitationMail, self).__init__('Invitación de Guadiabike BTT', self.contenido)
 
     def getContenido(self):
         content = '<p>Hola <b>' + self.nombre + '</b>.<br><br></p>'

@@ -13,9 +13,11 @@ body { background-color: #2b2b2b; color: #d9d9d9; }
 .bk-color-soft { color: #828282; }
 .bk-color-primary { color: #adde6a }
 .bk-color-secondary { color: #f9540c }
+.bk-color-muted { color: #737373; }
 
 input[type='text'] { border: 0px; background-color: transparent; width: 100%;}
 input[type='email'] { border: 0px; background-color: transparent; width: 100%;}
+input[type='password'] { border: 0px; background-color: transparent; width: 100%;}
 textarea { border: 0px; background-color: transparent; width: 100%; resize: none; }
 
 /* MAIN SECTIONS */
@@ -30,24 +32,34 @@ textarea { border: 0px; background-color: transparent; width: 100%; resize: none
 .bk-main-section .bk-content .bk-info { text-align: center; vertical-align: middle; padding: 5px; color: #bfbfbf; font-size: 0.8em; }
 .bk-main-section .bk-content .bk-separator { border-left: 1px solid #161616; }
 
-
 /* BOX */
 
-.bk-box { background-color: #393939; color: #d3d3d3; font-size: 11px; }
+.bk-box { font-size: 11px; padding: 20px 0 0px 0; }
 
-.bk-box .bk-title { color: #bfbfbf; text-align: center; text-transform:uppercase; border-top: 1px solid #2d2d2d; border-bottom: 1px solid #0d0d0d; font-weight: bold; background-color: #2d2d2d; padding: 3px 0px 2px 10px; }
+.bk-box .bk-title { color: #bfbfbf; text-align: center; text-transform:uppercase; border-top: 1px solid #474747; border-bottom: 1px solid #161616; font-weight: bold; background-color: #393939; padding: 3px 0px 2px 10px; }
 .bk-box .bk-content { border-top: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; background-color: #393939;  padding: 5px; }
-.bk-box .pair { background-color: #333333}
+.bk-box .pair { background-color: #333333; }
 
-.bk-box-info {  background-color: #080808; padding-top: 1px; padding-bottom: 1px;  }
-.bk-box-info div { background-color: #2d2d2d; padding-top: 8px; padding-bottom: 8px;   }
-.bk-box-info div span { display: block; }
+.bk-box .bk-content input[readonly], input[readonly="readonly"] { font-weight: bold;}
 
-.bk-box-error { margin: 10px; }
-.bk-box-error li { color: #adde6a; font-size: 12px; }
+/* MESSAGE BOX */
+
+.bk-box p { font-size: 11px; padding-top: 0; padding-bottom: 0; }
+.bk-box .title {  font-size: 1.6em; padding-top: 0; padding-bottom: 10px; }
+
+.bk-box .info {  background-color: #3372df; width: 95%; padding: 10px 0px 10px 10px; font-weight: bold; }
+.bk-box .danger {  background-color: #cb4437; width: 95%; float: right; padding: 10px 0px 10px 10px; font-weight: bold; }
+.bk-box .remember {  background-color: #09829a; width: 95%; padding: 10px 0px 10px 10px; font-weight: bold; }
+.bk-box .learning {  background-color: #da2e75; width: 95%; padding: 10px 0px 10px 10px; font-weight: bold; }
+.bk-box .muted {  background-color: #737373; width: 95%; padding: 10px 0px 10px 10px; font-weight: bold; }
+.bk-box .warning {  background-color: #ffd45b; width: 95%; padding: 10px 0px 10px 10px; font-weight: bold; }
+.bk-box .text {  background-color: #404040; width: 95%; padding: 10px 0px 10px 10px; font-weight: bold; }
+
+.bk-box .danger ul {  padding: 0 0 0 10px; }
+.bk-box .danger li {  font-size: 10px; }
 
 /* LOGIN */
-.bk-login input[type='text'], input[type='password'] { border: 1px solid gray; width: 200px; background-color: #e6e6e6;}
+.bk-login input[type='text'], .bk-login input[type='password'] { border: 1px solid gray; width: 200px; background-color: #e6e6e6;}
 
 
 /* PC - FULL SIZE

@@ -11,13 +11,16 @@
     <form method="post" action="{% url 'administration:admin_user_invitation' %}">
 
         {% if formulario.errors %}
-            <div class="bk-box-error">
+        <div class="bk-box">
+            <div class="danger">
                 {{ formulario.correo.errors }}
             </div>
+        </div>
         {% endif %}
 
+        <div class="ui-clear-both"></div>
+
         {% csrf_token %}
-         <div class="ui-block ui-ppp-tb"></div>
          <div class="clear bk-box ">
 
             <div class="bk-title">INVITACION DE USUARIO</div>

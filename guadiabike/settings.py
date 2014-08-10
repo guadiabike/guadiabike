@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'guadiabike',
     'binky_calendar',
+    'binky_admin',
+    'binky_user'
 )
 
 TEMPLATE_LOADERS = (
@@ -106,3 +108,11 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT = BASE_DIR + '/web-content/media'
 MEDIA_URL = '/media/'
+
+# MAIL
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'guadiabike.info@gmail.com'
+EMAIL_HOST_PASSWORD = 'Tesla200'
+EMAIL_PORT = 587
