@@ -1,10 +1,11 @@
 {% load staticfiles %}
+{% load l10n %}
 
 {% if nextruta %}
 
     <div class="bk-main-section">
 
-        <div class="bk-title">PRÓXIMA SALIDA</div>
+        <div class="bk-title">{{ nextruta.hora |date:"l, d \d\e F \d\e Y H:i" }}</div>
 
         <div class="bk-content ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';" >
 
@@ -18,11 +19,11 @@
                     <div class="ui-table-cell bk-c2">
 
                         <div class="ui-ppp">
-                        <span class="ui-large ui-color-high ui-block">{{ nextruta.ruta.nombre }}</span>
-                        <span class="ui-small ui-color-title ui-block">{{ nextruta.eventoTipo }}, dificultad {{ nextruta.ruta.dificultad }}</span>
+                        <span class="ui-large bk-color-high ui-block">{{ nextruta.ruta.nombre }}</span>
+                        <span class="ui-small bk-color-title ui-block">{{ nextruta.eventoTipo }}, dificultad {{ nextruta.ruta.dificultad }}</span>
                         <br>
-                        <span class="ui-small ui-color-soft">Distancia estimada: </span><span class="ui-small ui-color-high">{{ nextruta.ruta.distancia }} kms</span><br>
-                        <span class="ui-small ui-color-soft">Duración estimada: </span><span class="ui-small ui-color-high">{{ nextruta.ruta.tiempoFormateado }}</span>
+                        <span class="ui-small bk-color-soft">Distancia estimada: </span><span class="ui-small bk-color-high">{{ nextruta.ruta.distancia }} kms</span><br>
+                        <span class="ui-small bk-color-soft">Duración estimada: </span><span class="ui-small bk-color-high">{{ nextruta.ruta.tiempoFormateado }}</span>
                         </div>
 
                     </div>

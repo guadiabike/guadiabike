@@ -15,11 +15,41 @@
 
     <main>
 
-        <div>
+        <div class="bk-fluid-container">
+
+            <!-- PRINCIPAL CONTENT -->
+
+            <div class="bk-container c1">
+                <p class="bk-container-title">Próximos eventos</p>
+                {% evento_next %}
+            </div>
+
+            <!-- RIGHT MENU -->
+
+            <div class="c2">
+
+                <div class="bk-container">
+                    <p class="bk-container-title">Resumen semanal</p>
+                    <div class="bk-box">
+                        <span class="ui-block ui-bold">0,0 kms</span>
+                        <div>
+                            <div class="bk-progress-container">
+                                <div class="bk-progress-box" style="width: 73.33333333333333%;">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="ui-block ui-small bk-color-soft">Ciclismo momtaña</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
 
         </div>
 
-        {% evento_next %}
 
     </main>
 

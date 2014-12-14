@@ -29,6 +29,9 @@
         <link rel="stylesheet" href="{{ STATIC_URL }}styles/main.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}styles/ui-helpers.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}theme/dark.css">
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="{{ STATIC_URL }}theme/dark-ie.css"/>
+        <![endif]-->
 	{% endblock %}
 
 	{% block extrastyle %}{% endblock %}
@@ -53,6 +56,8 @@
     {% block header %}{% endblock %}
 
     {% block nav %}{% endblock %}
+
+    {% block breadcrumbs %}{% endblock %}
 
     {% block content %}{% endblock %}
 

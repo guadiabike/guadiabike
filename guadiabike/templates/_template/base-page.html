@@ -37,6 +37,12 @@
 
 {% endblock %}
 
+{% block breadcrumbs %}
+    <div class="bk-breadcrumbs">
+        <ul>{% block breadcrumbs-list %} <li><a href="{% url 'home' %}">Inicio</a></li> {% endblock %}</ul>
+    </div>
+{% endblock %}
+
 {% block extrascripts %}
 
     <script src="{{ STATIC_URL }}scripts/main.js"></script>

@@ -8,6 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -19,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 's+7%*y7ico+2lao-(hp#^th%wht#e7ao5go-2&u96&actv%=ji'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,7 +39,7 @@ INSTALLED_APPS = (
     'guadiabike',
     'binky_calendar',
     'binky_admin',
-    'binky_user'
+    'binky_user',
 )
 
 TEMPLATE_LOADERS = (
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'guadiabike.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'guadiabike',
+        'NAME': 'guadiabike$guadiabike',
         'USER': 'guadiabike',
         'PASSWORD': 'guadiabike',
-        'HOST': '127.0.0.1',
+        'HOST': 'mysql.server',
         'PORT': '3306',
     }
 }

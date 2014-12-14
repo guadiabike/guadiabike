@@ -36,7 +36,7 @@
 
 .ui-block-50    { width: 50%; }
 .ui-clear-both  { clear:both; }
-.ui-block       {display:block;}
+.ui-block       { display:block;}
 .ui-clickeable  { cursor: pointer; cursor: hand; }
 
 .ui-nodecoration { text-decoration: none; color: white; }
@@ -58,7 +58,7 @@
 .ui-third   { float: left; margin-right: 0.5%; width: 33%; }
 .ui-last    { margin-right: 0; }
 
-.ui.bold    { font-weight: bold; }
+.ui-bold    { font-weight: bold; }
 
 /* MOBILE - COMMON
  -------------------------------------------------------------------------------------------------------- */
