@@ -5,46 +5,66 @@
 
 {% block header %}
 
-    <header class="app-bar promote-layer">
-      <div class="app-bar-container">
-        <button class="menu"><img src="{{ STATIC_URL }}images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo">Guadiabike</h1>
-        <section class="app-bar-actions">
-        <!-- Put App Bar Buttons Here -->
-        </section>
-      </div>
-    </header>
+	<!-- HEADER - Logo y navegación
+	---------------------------------------------------------------------------------------- -->
+
+	<div id="jp-main-header" class="jp-main-header">
+		<div class="content jp-table">
+
+			<div class="logo jp-cell">GUADIABIKE</div>
+
+			<div class="menu jp-cell">
+				<div class="option" onclick="location.href='{% url 'home' %}';">Inicio</div>
+
+                {% if user.is_authenticated %}
+				<div class="option" onclick="location.href='{% url 'logout' %}';">Logout</div>
+                {% endif %}
+
+                {% if request.user|has_group:'administradores' %}
+				<div class="option" onclick="location.href='{% url 'administration:admin_index' %}';">Administración</div>
+                {% endif %}
+			</div>
+
+			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/action/ic_search_white_18dp.png"/></div>
+			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/communication/ic_message_white_18dp.png"/></div>
+			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/social/ic_person_white_18dp.png"/></div>
+			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/navigation/ic_more_vert_white_16dp.png"/></div>
+
+		</div>
+	</div>
 
 {% endblock %}
 
 {% block nav %}
 
-    <nav class="navdrawer-container promote-layer">
-      <h4>Menú</h4>
-      <ul>
-        <li><a href="{% url 'home' %}">Inicio</a></li>
+		<div class="jp-nav">
+			<div class="box">
 
-        {% if request.user|has_group:'administradores' %}
-            <li><a href="{% url 'administration:admin_index' %}">Administración</a></li>
-        {% endif %}
-
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'logout' %}">Logout</a></li>
-        {% endif %}
-
-      </ul>
-    </nav>
+				<div class="section">
+					<div class="title">title</div>
+					<div class="action">action</div>
+					<div class="content">
+						content
+					</div>
+				</div>
+			</div>
+		</div>
 
 {% endblock %}
 
 {% block breadcrumbs %}
+    <!--
     <div class="bk-breadcrumbs">
         <ul>{% block breadcrumbs-list %} <li><a href="{% url 'home' %}">Inicio</a></li> {% endblock %}</ul>
     </div>
+    -->
 {% endblock %}
 
 {% block extrascripts %}
 
+    <-!!
     <script src="{{ STATIC_URL }}scripts/main.js"></script>
+
+    -->
 
 {% endblock %}

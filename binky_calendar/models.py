@@ -121,7 +121,7 @@ class Evento(models.Model):
 class AsisteEvento(models.Model):
     user = models.ForeignKey(User)
     evento = models.ForeignKey(Evento)
-    asiste = models.BooleanField(blank=False)
+    asiste = models.BooleanField(default=False, blank=False)
     udate = models.DateField(default=datetime.now(), editable=False)
     uinformation = models.CharField(default='LOADDATA', max_length=200, editable=False)
 

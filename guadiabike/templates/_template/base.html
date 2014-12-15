@@ -25,12 +25,12 @@
 
 	{% block style %}
 	<!-- CSS -->
-        <link rel="stylesheet" href="{{ STATIC_URL }}styles/components/components.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}styles/main.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}styles/ui-helpers.css">
-        <link rel="stylesheet" href="{{ STATIC_URL }}theme/dark.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}theme/blue.css">
+
         <!--[if lt IE 9]>
-        <link rel="stylesheet" href="{{ STATIC_URL }}theme/dark-ie.css"/>
+        <link rel="stylesheet" href="{{ STATIC_URL }}theme/blue-ie.css"/>
         <![endif]-->
 	{% endblock %}
 
@@ -38,7 +38,8 @@
 
 	{% block js %}
     <!-- JS Libraries -->
-         <script src="{{ STATIC_URL }}scripts/jquery.js"></script>
+        <script src="{{ STATIC_URL }}scripts/jquery.js"></script>
+        <script src="{{ STATIC_URL }}scripts/main.js"></script>
 	{% endblock %}
 
 	{% block extrajs %}{% endblock %}
@@ -55,11 +56,16 @@
 
     {% block header %}{% endblock %}
 
-    {% block nav %}{% endblock %}
+    <div class="jp-main-content">
 
-    {% block breadcrumbs %}{% endblock %}
+        {% block breadcrumbs %}{% endblock %}
 
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
+
+        {% block nav %}{% endblock %}
+
+    	<div style="clear: both;"></div>
+	</div>
 
     {% block footer %}{% endblock %}
 

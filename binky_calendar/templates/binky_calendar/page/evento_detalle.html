@@ -5,67 +5,70 @@
 
 {% block content %}
 
-    <main>
-
     {% if nextruta %}
 
-        <div class="ui-fluid-container" role="main">
-            <div class="c1 " style="text-align: center;">
+    <div class="jp-section">
+        <div class="box">
 
-                <div class="g-medium--full clear bk-box ui-ppp-tb">
-                    <div class="ui-third" style="margin-top: 15%;">
-                        <span class="ui-block">{{ nextruta.hora |date:"H:i d.m.y" }}</span>
-                        <span class="ui-color-high ui-block ui-uppercase">{{ nextruta.eventoTipo }}</span>
-                    </div>
-                    <div class="ui-third">
-                        <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}">
-                    </div>
-                    <div class="ui-third ui-last" style="margin-top: 15%;">
-                        <span class="ui-large ui-color-high"></span>
-                    </div>
+            <div class="box-event-back" onclick="location.href='{% url 'home' %}';"></div>
+
+            <div class="box-header">
+                <div class="image">
+                        <img style="width:80px; height:80px;" src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}"/>
+                </div>
+                <div class="center">
+                    <span class="title">{{ nextruta.ruta.nombre }}</span>
+                    <span class="subtitle">{{ nextruta.eventoTipo }}, dificultad {{ nextruta.ruta.dificultad }} </span>
+                    <span class="subsubtitle">{{ nextruta.hora |date:"l, d \d\e F \d\e Y H:i" }}</span>
+                </div>
+                <div class="right">
+                    <span class="number">#</span>
+                    <span class="info">asistentes</span>
                 </div>
 
-
-                <div class="clear bk-box-info ">
-                    <div class="ui-third">
-                        <span class="ui-large ui-color-high">{{ nextruta.ruta.calorias }}</span>
-                        <span class="ui-small ui-uppercase">calorías</span>
-                    </div>
-                    <div class="ui-third">
-                        <span class="ui-large ui-color-high">{{ nextruta.ruta.dificultad }}</span>
-                        <span class="ui-small ui-uppercase">dificultad</span>
-
-                    </div>
-                    <div class="ui-third ui-last">
-                        <span class="ui-large ui-color-high">{{ nextruta.ruta.distancia }}</span>
-                        <span class="ui-small ui-uppercase">kilómetros</span>
-                    </div>
-                </div>
-
+                <div class="action1"><img src="{{ STATIC_URL }}images/md/navigation/ic_more_vert_grey600_16dp.png   "/></div>
+                <div style="clear: both;"></div>
             </div>
-            <div class="c2 clear bk-box">
 
-                <div class="bk-title">INFORMACIÓN DE RUTA</div>
+            <div class="box-navigation">
+                <span id="box-option-information" class="option option-selected">Informacion</span>
+                <span id="box-option-recorrido" class="option">Recorrido</span>
+                <span id="box-option-comentarios" class="option">Comentarios</span>
+            </div>
 
-                <div class="bk-content">
-                    <span class="ui-color-soft">Tipo</span><span class="ui-fr">{{ nextruta.eventoTipo }}</span>
-                </div>
-                <div class="bk-content pair">
-                    <span class="ui-color-soft">Nombre</span><span class="ui-fr">{{ nextruta.ruta.nombre }}</span>
-                </div>
-                <div class="bk-content">
-                    <span class="ui-color-soft">Dificultad</span><span class="ui-fr">{{ nextruta.ruta.dificultad }}</span>
-                </div>
-                <div class="bk-content pair">
-                    <span class="ui-color-soft">Duración est.</span><span class="ui-fr">{{ nextruta.ruta.tiempoFormateado }}</span>
-                </div>
-                <div class="bk-content">
-                    <span class="ui-color-soft">Desnivel est.</span><span class="ui-fr">{{ nextruta.ruta.desnivelAcumuladoFormateado }}</span>
+            <div class="box-content">
+                <div id="box-option-information-tab" class="box-tab">
+
+                    <div class="field">
+                    <span class="field-data">{{ nextruta.eventoTipo }}</span><span class="field-title">Tipo</span>
+                    </div>
+                    <div class="field">
+                    <span class="field-data">{{ nextruta.ruta.nombre }}</span><span class="field-title">Nombre</span>
+                    </div>
+                    <div class="field">
+                    <span class="field-data">{{ nextruta.ruta.dificultad }}</span><span class="field-title">Dificultad</span>
+                    </div>
+                    <div class="field">
+                    <span class="field-data">{{ nextruta.ruta.tiempoFormateado }}</span><span class="field-title">Duración estimada</span>
+                    </div>
+                    <div class="field">
+                    <span class="field-data">{{ nextruta.ruta.desnivelAcumuladoFormateado }}</span><span class="field-title">Desnivel acumulado</span>
+                    </div>
+
+
+                    <div style="clear: both;"></div>
+
+                    {% if nextruta.ruta.imagen_perfil %}
+                        <br>
+                        <div class="separator"></div>
+                        <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_perfil }}" width="100%">
+                    {% endif %}
+
                 </div>
 
-                <div class="bk-title">COMENTARIO</div>
+                <div id="box-option-recorrido-tab" class="box-tab" style="display: none;"></div>
 
-                <div class="bk-content">
+                <div id="box-option-comentarios-tab" class="box-tab" style="display: none;">
                     {% if nextruta.comentario %}
                     <span class="ui-color-soft">{{ nextruta.comentario }}</span>
                     {% else %}
@@ -73,37 +76,40 @@
                     {% endif %}
                 </div>
 
-                <div class="bk-title">PERFIL</div>
-
-                <div class="bk-content">
-
-                    {% if nextruta.ruta.imagen_perfil %}
-                        <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_perfil }}" width="100%">
-                    {%  else %}
-                        <span class="ui-color-soft">No existe información de perfil.</span>
-                    {% endif %}
-
-                </div>
-
-                <div class="bk-title">RECORRIDO</div>
-
-                <div class="bk-content">
-
-                    {% if nextruta.ruta.mapa_url %}
-                        <iframe frameBorder="0" src="{{ nextruta.ruta.mapa_url }}"
-                                width="100%" height="400">
-                        </iframe>
-                    {%  else %}
-                        <span class="ui-color-soft">{{ nextruta.ruta.descripcion }}</span>
-                    {% endif %}
-
-                </div>
-
             </div>
+
         </div>
+    </div>
 
     {% endif %}
 
-    </main>
+{% endblock %}
 
+
+{% block extrascripts %}
+<script>
+    $(document).ready(function() {
+        $('.option').click(function(){
+
+            $('.box-navigation span').removeClass('option-selected');
+            $(this).addClass('option-selected');
+
+            $('.box-tab').hide();
+            $('#' + $(this).attr('id') + '-tab').show();
+
+            if ($('#box-option-recorrido-tab').html() == '') {
+                evento_detalle_load_ruta();
+            }
+        });
+    });
+
+    function evento_detalle_load_ruta() {
+        {% if nextruta.ruta.mapa_url %}
+            $('#box-option-recorrido-tab').html('<iframe frameBorder="0" src="{{ nextruta.ruta.mapa_url }}" width="100%" height="400"></iframe>');
+        {%  else %}
+            $('#box-option-recorrido-tab').html('<span class="ui-color-soft">{{ nextruta.ruta.descripcion }}</span>');
+        {% endif %}
+    }
+
+</script>
 {% endblock %}
