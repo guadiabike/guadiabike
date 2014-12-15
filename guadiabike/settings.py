@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 's+7%*y7ico+2lao-(hp#^th%wht#e7ao5go-2&u96&actv%=ji'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = False
 
@@ -104,10 +104,10 @@ USE_L10N = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    BASE_DIR + '\web-content\static',
+    BASE_DIR + '/web-content/static',
 )
 
-MEDIA_ROOT = BASE_DIR + '\web-content\media'
+MEDIA_ROOT = BASE_DIR + '/web-content/media'
 MEDIA_URL = '/media/'
 
 # MAIL
