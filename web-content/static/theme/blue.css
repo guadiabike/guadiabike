@@ -1,41 +1,11 @@
-html, body {
-    background-color: #F1F3F2; color: #8e8e8e;
-}
+html, body { background-color: #F1F3F2; color: #8e8e8e; }
 
-.jp-main-header {
-    position: fixed; top:0; left:0;
-    width:100%; height:70px;
-    color: white;
-    background-color: #008ab9;
-    border-top: 1px solid #0083b7;
-    z-index: 100;
-}
+.jp-main-header { background-color: #008ab9; color: white; border-top: 1px solid #0083b7; }
 
-.jp-main-header .content { width: 80%; min-width: 700px; float: right; height:70px; }
-.jp-main-header .content .logo { padding: 0 25px 0 20px; line-height: 1.5em; font-size: 2.5em; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; vertical-align: middle; }
-.jp-main-header .content .menu { vertical-align: middle; width: 100%; }
-.jp-main-header .content .menu .option { display: inline-block; padding: 0 10px 0 15px; font-weight: bold; cursor: pointer; cursor: hand; }
-.jp-main-header .content .action { vertical-align: middle; padding: 0 15px 0 0px; cursor: pointer; cursor: hand; }
+.jp-nav { background-color: white; border-left: 1px solid #f4f6f5; }
+.jp-nav .box .section { border-bottom: 1px solid #F1F3F2;}
 
 
-.jp-main-content {
-    display:table;	min-height: 100%;
-    float: right; width: 80%; min-width: 700px; padding-top: 70px;
-}
-
-.jp-nav {
-    display: table-cell; width: 35%;
-    vertical-align: top; background-color: white;
-    border-left: 1px solid #f4f6f5;
-}
-
-.jp-nav .box { }
-.jp-nav .box .section { padding: 10px; border-bottom: 1px solid #F1F3F2;}
-
-.jp-section {
-    display: table-cell; width: 65%;
-    vertical-align: top;
-}
 
 .jp-section .box { position: relative; margin: 10px; border: 1px solid #e1e1e1; background-color: white; border-radius: 3px;}
 
@@ -79,3 +49,15 @@ html, body {
 .ic-content-undo-24 { background-image: url('../images/md/content/ic_undo_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
 .ic-navigation-check-24 { background-image: url('../images/md/navigation/ic_check_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
 .ic-navigation-cancel-24 { background-image: url('../images/md/navigation/ic_cancel_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
+
+
+
+/** Larger Screens - desktops and tablets
+    ---------------------------------------------------------------------------
+**/
+
+@media screen and (max-width: 700px) {
+
+.jp-nav { border: none; }
+
+}

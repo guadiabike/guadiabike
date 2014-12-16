@@ -1,7 +1,45 @@
 html, body {
-    height:100%;
-    min-width: 700px;
-    font-size: 12px; font-family: Arial, sans-serif;
-    font-style: normal; font-style: normal; font-style: normal;
+    height:100%; min-width: 700px;
+    font-size: 12px; font-family: Arial, sans-serif; font-style: normal;
     margin: 0; padding: 0;
+}
+
+/* CABECERA DEL MENÚ DE APLICACION */
+
+.jp-main-header {  position: fixed; top:0; left:0; width:100%; height:70px; z-index: 100; }
+.jp-main-header .content { width: 80%; min-width: 700px; float: right; height:100%; }
+.jp-main-header .content .logo { padding: 0 25px 0 20px; line-height: 1.5em; font-size: 2.5em; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; vertical-align: middle; }
+.jp-main-header .content .menu { vertical-align: middle; width: 100%; }
+.jp-main-header .content .menu .option { display: inline-block; padding: 0 10px 0 15px; font-weight: bold; cursor: pointer; cursor: hand; }
+.jp-main-header .content .action { vertical-align: middle; padding: 0 5px 0 5px; cursor: pointer; cursor: hand; }
+
+.jp-main-content { display:table;	min-height: 100%; float: right; width: 80%; min-width: 700px; padding-top: 70px; }
+
+.jp-nav { display: table-cell; width: 35%; vertical-align: top; }
+.jp-nav .box { }
+.jp-nav .box .section { padding: 10px; }
+
+.jp-section { display: table-cell; width: 65%; vertical-align: top; }
+
+/** Larger Screens - desktops and tablets
+    ---------------------------------------------------------------------------
+**/
+
+@media screen and (max-width: 700px) {
+
+html, body { min-width: 300px; }
+
+/* CABECERA DEL MENÚ DE APLICACION */
+
+.jp-main-header { height:30px; }
+.jp-main-header .content { width: 100%; min-width: auto; }
+.jp-main-header .content .logo { padding: 0 5px 0 5px; font-size: 1.4em; }
+.jp-main-header .content .menu { display: none; }
+
+.jp-main-content { display: block; float: none; width: 100%; min-width: 0; min-height: auto;}
+
+.jp-nav { display: block; width: 100%; vertical-align: top; }
+
+.jp-section { display: block; width: 100%; vertical-align: top; }
+
 }
