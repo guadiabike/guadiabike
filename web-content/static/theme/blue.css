@@ -1,9 +1,5 @@
 html, body {
-    height:100%;
-    min-width: 700px;
-    margin: 0px; background-color: #F1F3F2; color: #8e8e8e;
-    font-size: 12px; font-family: Arial, sans-serif;
-    font-style: normal; font-style: normal; font-style: normal;
+    background-color: #F1F3F2; color: #8e8e8e;
 }
 
 .jp-main-header {
@@ -12,12 +8,11 @@ html, body {
     color: white;
     background-color: #008ab9;
     border-top: 1px solid #0083b7;
-    border-bottom: 1px solid #7aa5b5;
     z-index: 100;
 }
 
 .jp-main-header .content { width: 80%; min-width: 700px; float: right; height:70px; }
-.jp-main-header .content .logo { padding: 0 25px 0 20px; line-height: 1.5em; font-size: 32px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; vertical-align: middle; }
+.jp-main-header .content .logo { padding: 0 25px 0 20px; line-height: 1.5em; font-size: 2.5em; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; vertical-align: middle; }
 .jp-main-header .content .menu { vertical-align: middle; width: 100%; }
 .jp-main-header .content .menu .option { display: inline-block; padding: 0 10px 0 15px; font-weight: bold; cursor: pointer; cursor: hand; }
 .jp-main-header .content .action { vertical-align: middle; padding: 0 15px 0 0px; cursor: pointer; cursor: hand; }
@@ -49,12 +44,12 @@ html, body {
 .jp-section .box .box-header { position: relative; padding: 10px; min-height: 100px; border-bottom: 1px solid #f5f5f5; }
 .jp-section .box .box-header .image { float:left; margin: 10px;	}
 .jp-section .box .box-header .center { float:left; margin: 10px; }
-.jp-section .box .box-header .center .title { font-size: 20px; color: #1e1e1e; display:block; line-height: 1.2em; }
+.jp-section .box .box-header .center .title { font-size: 1.7em; color: #1e1e1e; display:block; line-height: 1.2em; }
 .jp-section .box .box-header .center .subtitle {  color: #7b7b7b; display:block; line-height: 2em;}
-.jp-section .box .box-header .center .subsubtitle { color: #cccccc; display:block; line-height: 2em; font-size: 11px;}
+.jp-section .box .box-header .center .subsubtitle { color: #cccccc; display:block; line-height: 2em; font-size: 0.9em; }
 .jp-section .box .box-header .right { float:right;  margin: 40px 10px 10px 10px;  }
-.jp-section .box .box-header .right .number { font-weight: bold; font-size: 16px; color: #3f3f3f; display:block; text-align: right;}
-.jp-section .box .box-header .right .info { font-size: 14px; color: #7b7b7b; display:block; text-align: right;}
+.jp-section .box .box-header .right .number { font-weight: bold; font-size: 1.3em; color: #3f3f3f; display:block; text-align: right;}
+.jp-section .box .box-header .right .info { font-size: 1.3em; color: #7b7b7b; display:block; text-align: right;}
 .jp-section .box .box-header .action1 { position: absolute; right: 10px; cursor: pointer; cursor: hand;}
 
 .jp-section .box .box-navigation { padding: 15px 0 15px 0; }
@@ -67,8 +62,20 @@ html, body {
 
 .field { float: left; padding: 5px 25px 5px 0px; }
 .field .field-data { display:block; line-height: 1.5em;  }
-.field .field-title { color: #cccccc; display:block; line-height: 1em; font-size: 10px; }
+.field .field-title { color: #cccccc; display:block; line-height: 1em; font-size: 0.8em; }
+.field .field-title { color: #cccccc; display:block; line-height: 1em; font-size: 0.8em; }
 
 
 .jp-table { display: table; }
 .jp-cell { display: table-cell; }
+
+
+
+/* BUTTONS
+ -------------------------------------------------------------------------------------------------------- */
+
+.theme-button-color { background-color: #29b7e7; box-shadow: 2px 2px 2px #888888; }
+
+.ic-content-undo-24 { background-image: url('../images/md/content/ic_undo_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
+.ic-navigation-check-24 { background-image: url('../images/md/navigation/ic_check_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
+.ic-navigation-cancel-24 { background-image: url('../images/md/navigation/ic_cancel_white_24dp.png'); background-position: center; background-repeat: no-repeat; }

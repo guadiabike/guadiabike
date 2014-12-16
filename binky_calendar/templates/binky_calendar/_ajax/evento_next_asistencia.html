@@ -1,19 +1,22 @@
 {% if confirmado %}
 
+    <div class="field">
     {% if asiste %}
-        <i class="icon icon-tick"></i><span class="ui-ppp-l bk-color-primary">Ha confirmado su asistencia.</span>
+        <span class="field-data">Has confirmado tu asistencia.</span><span class="field-title">Asistencia al evento</span>
     {% else %}
-        <i class="icon icon-cog"></i><span class="ui-ppp-l bk-color-secondary">Ha confirmado que no asistirá.</span>
+         <span class="field-data">Has confirmado que no asistirás.</span><span class="field-title">Asistencia al evento</span>
     {% endif %}
-        <span class="ui-clickeable" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 2)">Deshacer</span>
+    </div>
+
+    <div class="ui-button-1 theme-button-color ic-content-undo-24" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 2)"></div>
+
 {% else %}
 
-    <span class="ui-block">¿Deseas confirmar asistencia a ruta?</span>
-    <span>
-        <a class="button--primary ui-clickeable" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 1)">Si</a>
-    </span>
-    <span>
-        <a class="button--primary ui-clickeable" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 0)">No</a>
-    </span>
+    <span>¿Deseas confirmar asistencia a ruta?</span>
+
+    <div class="ui-button-1 theme-button-color ic-navigation-check-24" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 1)"></div>
+    <div class="ui-button-2 theme-button-color ic-navigation-cancel-24" onclick="bk_calendar_eventoAsiste('{{ evento_id }}', '{{ request.user.id }}', 0)"></div>
 
 {% endif %}
+
+<div class="ui-clear-both"></div>
