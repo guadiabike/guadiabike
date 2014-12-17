@@ -24,7 +24,7 @@ html, body { background-color: #F1F3F2; color: #8e8e8e; }
 
 
 
-.jp-section .box .box-navigation .option { margin: 0 15px 0 15px; padding: 0 5px 5px 5px; font-weight: bold; cursor: pointer; cursor: hand; }
+
 .jp-section .box .box-navigation .option-selected { border-bottom: 2px solid #0185b6; color: #1e1e1e; }
 
 .jp-section .box .box-content { padding: 10px 20px 20px 20px; top-bottom: 1px solid #fbfbfb; }
