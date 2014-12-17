@@ -13,16 +13,20 @@
 
 			<div class="logo jp-cell">GUADIABIKE</div>
 
+            <div id="large-mode">&nbsp;</div>
+
 			<div class="menu jp-cell">
-				<div class="option" onclick="location.href='{% url 'home' %}';">Inicio</div>
+                <div class="options">
+                    <div class="option" onclick="location.href='{% url 'home' %}';">Inicio</div>
 
-                {% if user.is_authenticated %}
-				<div class="option" onclick="location.href='{% url 'logout' %}';">Logout</div>
-                {% endif %}
+                    {% if user.is_authenticated %}
+                    <div class="option" onclick="location.href='{% url 'logout' %}';">Logout</div>
+                    {% endif %}
 
-                {% if request.user|has_group:'administradores' %}
-				<div class="option" onclick="location.href='{% url 'administration:admin_index' %}';">Administración</div>
-                {% endif %}
+                    {% if request.user|has_group:'administradores' %}
+                    <div class="option" onclick="location.href='{% url 'administration:admin_index' %}';">Administración</div>
+                    {% endif %}
+                </div>
 			</div>
 
 			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/action/ic_search_white_18dp.png"/></div>
