@@ -8,7 +8,7 @@
 
             <div class="box-header">
                 <div class="image ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">
-                        <img style="width:80px; height:80px;" src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}"/>
+                        <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}"/>
                 </div>
                 <div class="center">
                     <span class="title ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">Próxima salida</span>

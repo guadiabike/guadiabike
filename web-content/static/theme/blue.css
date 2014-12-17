@@ -5,21 +5,22 @@ html, body { background-color: #F1F3F2; color: #8e8e8e; }
 .jp-nav { background-color: white; border-left: 1px solid #f4f6f5; }
 .jp-nav .box .section { border-bottom: 1px solid #F1F3F2;}
 
+.jp-section .box { border: 1px solid #e1e1e1; background-color: white;}
+.jp-section .box .box-event-back { background-image: url('../images/md/navigation/ic_chevron_left_grey600_48dp.png'); }
+.jp-section .box .box-header { border-bottom: 1px solid #f5f5f5; }
+.jp-section .box .box-header .center .title { color: #1e1e1e; }
+.jp-section .box .box-header .center .subtitle {  color: #7b7b7b; }
+.jp-section .box .box-header .center .subsubtitle { color: #cccccc; }
+.jp-section .box .box-header .right .number { color: #3f3f3f; }
+.jp-section .box .box-header .right .info { color: #7b7b7b; }
 
 
-.jp-section .box { position: relative; margin: 10px; border: 1px solid #e1e1e1; background-color: white; border-radius: 3px;}
 
-.jp-section .box .box-event-back { cursor: pointer;  position: absolute; top: 0px; left: -52px; width: 48px; height: 48px; background-image: url('../images/md/navigation/ic_chevron_left_grey600_48dp.png'); }
 
-.jp-section .box .box-header { position: relative; padding: 10px; min-height: 100px; border-bottom: 1px solid #f5f5f5; }
-.jp-section .box .box-header .image { float:left; margin: 10px;	}
-.jp-section .box .box-header .center { float:left; margin: 10px; }
-.jp-section .box .box-header .center .title { font-size: 1.7em; color: #1e1e1e; display:block; line-height: 1.2em; }
-.jp-section .box .box-header .center .subtitle {  color: #7b7b7b; display:block; line-height: 2em;}
-.jp-section .box .box-header .center .subsubtitle { color: #cccccc; display:block; line-height: 2em; font-size: 0.9em; }
-.jp-section .box .box-header .right { float:right;  margin: 40px 10px 10px 10px;  }
-.jp-section .box .box-header .right .number { font-weight: bold; font-size: 1.3em; color: #3f3f3f; display:block; text-align: right;}
-.jp-section .box .box-header .right .info { font-size: 1.3em; color: #7b7b7b; display:block; text-align: right;}
+
+
+
+
 .jp-section .box .box-header .action1 { position: absolute; right: 10px; cursor: pointer; cursor: hand;}
 
 .jp-section .box .box-navigation { padding: 15px 0 15px 0; }

@@ -12,4 +12,12 @@ $(window).scroll(function() {
             $('#jp-main-header .content .logo').css({'font-size': '2.5em'});
         }
     }
+    else {
+        if ($(window).scrollTop() - 5 > 0) {
+            $('#jp-main-header').css({'box-shadow': '0px 2px 2px #888888'});
+        }
+        else {
+            $('#jp-main-header').css({'box-shadow': 'none'});
+        }
+    }
 });
