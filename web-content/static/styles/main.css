@@ -32,6 +32,9 @@ html, body {
 .jp-section .box .box-header .right { float:right;  margin: 40px 10px 10px 10px;  }
 .jp-section .box .box-header .right .number { font-weight: bold; font-size: 1.3em; display:block; text-align: right;}
 .jp-section .box .box-header .right .info { font-size: 1.3em; display:block; text-align: right;}
+.jp-section .box .box-header .action1 { position: absolute; right: 10px; cursor: pointer; cursor: hand;}
+.jp-section .box .box-navigation { padding: 15px 0 15px 0; }
+
 
 
 /** Larger Screens - desktops and tablets
