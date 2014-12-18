@@ -31,7 +31,7 @@ html, body { background-color: #F1F3F2; color: #8e8e8e; }
 
 .jp-section .box .separator { border-top: 1px solid #f3f3f3;  margin: 0 20px 0 20px;}
 
-.field { float: left; padding: 5px 25px 5px 0px; }
+.field { float: left; padding: 5px 25px 5px 0px; min-width: 100px;}
 .field .field-data { display:block; line-height: 1.5em;  }
 .field .field-title { color: #cccccc; display:block; line-height: 1em; font-size: 0.8em; }
 .field .field-title { color: #cccccc; display:block; line-height: 1em; font-size: 0.8em; }
