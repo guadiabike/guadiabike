@@ -27,6 +27,7 @@ def binky_calendar_evento_asiste(request):
 
     confirmado = True
     asiste = False
+    nAsistentes = 0
 
     try:
         evento_id = request.GET['evento_id']
@@ -55,7 +56,11 @@ def binky_calendar_evento_asiste(request):
             asistencia.asiste = asiste
             asistencia.save()
 
+        nAsistentes = len(AsisteEvento.objects.filter(evento_id=evento_id, asiste=True))
+
     except Exception:
         confirmado = False
 
-    return render(request, 'binky_calendar/_ajax/evento_next_asistencia.html', { 'evento_id': evento_id, 'confirmado': confirmado, 'asiste': asiste})
+    return render(request,
+                  'binky_calendar/_ajax/evento_next_asistencia.html',
+                  { 'evento_id': evento_id, 'confirmado': confirmado, 'asiste': asiste, 'nAsistentes': nAsistentes})

@@ -3,6 +3,8 @@
 {% load i18n %}
 {% load binky_calendar %}
 
+{% block menu-mobile %}<img onclick="location.href='{% url 'home' %}';" src="{{ STATIC_URL }}images/md/navigation/ic_arrow_back_white_18dp.png"/>{% endblock %}
+
 {% block content %}
 
     {% if nextruta %}
@@ -10,7 +12,7 @@
     <div class="jp-section">
         <div class="box">
 
-            <div class="box-event-back" onclick="location.href='{% url 'home' %}';"></div>
+            <div class="box-event-back ui-pc" onclick="location.href='{% url 'home' %}';"></div>
 
             <div class="box-header">
                 <div class="image">
@@ -31,6 +33,7 @@
                     <span id="box-option-information" class="option option-selected">Informacion</span>
                     <span id="box-option-recorrido" class="option">Recorrido</span>
                     <span id="box-option-comentarios" class="option">Comentarios</span>
+                    <span id="box-option-multimedia" class="option">Multimedia</span>
                  </div>
             </div>
 
@@ -72,6 +75,10 @@
                     {% else %}
                     <span class="ui-color-soft">No hay comentarios para esta ruta</span>
                     {% endif %}
+                </div>
+
+                <div id="box-option-multimedia-tab" class="box-tab" style="display: none;">
+                    Multimedia
                 </div>
 
             </div>

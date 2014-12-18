@@ -50,6 +50,10 @@ html, body {
 
 html, body { min-width: 300px; }
 
+/* ELEMENTOS DE DISPOSITIVO MOVIL NO SE MUSTRAN */
+
+#jp-menu-mobile { display: none; }
+
 /* CABECERA DEL MENÚ DE APLICACION */
 
 .jp-main-header { height: 40px;  }
@@ -71,6 +75,6 @@ html, body { min-width: 300px; }
 .jp-section .box .box-header .right {  margin: 40px 10px 5px 5px; }
 .jp-section .box .box-header .right .number { font-size: 1.1em; }
 .jp-section .box .box-header .right .info { font-size: 1.1em; }
-.jp-section .box .box-navigation .option { margin: 0 5px 0 10px; padding: 0 3px 3px 3px; }
+.jp-section .box .box-navigation .option { margin: 0 5px 0 10px; padding: 0 3px 3px 3px; font-size: 0.95em; }
 
 }

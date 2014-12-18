@@ -16,7 +16,7 @@
                     <span class="subsubtitle">{{ nextruta.tiempoRestante }}</span>
                 </div>
                 <div class="right">
-                    <span class="number">{{ nAsistentes }}</span>
+                    <span id="evento-next-number" class="number">{{ nAsistentes }}</span>
                     <span class="info">asistentes</span>
                 </div>
 
@@ -58,6 +58,7 @@
     function bk_calendar_eventoAsiste(eventoId, userId, asisteParam) {
         $.get('{% url 'calendar:evento_asiste' %}', {evento_id: eventoId, user_id: userId, asiste: asisteParam}, function(data){
             $('#bk_evento_next_ruta_' + eventoId).html(data);
+            $('#evento-next-number').html($('#event_next_asistencia_nAsistentes').val());
         });
     }
     $(document).ready(function() { });

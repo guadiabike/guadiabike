@@ -37,10 +37,7 @@ html, body { background-color: #F1F3F2; color: #8e8e8e; }
 .field .field-title { color: #cccccc; display:block; line-height: 1em; font-size: 0.8em; }
 
 
-.jp-table { display: table; }
-.jp-cell { display: table-cell; }
-
-
+.jp-text-high { color: #43a7cb; font-weight: bold; }
 
 /* BUTTONS
  -------------------------------------------------------------------------------------------------------- */

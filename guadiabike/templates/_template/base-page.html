@@ -9,13 +9,17 @@
 	---------------------------------------------------------------------------------------- -->
 
 	<div id="jp-main-header" class="jp-main-header">
-		<div class="content jp-table">
+		<div class="content ui-table">
 
-			<div class="logo jp-cell">GUADIABIKE</div>
+            <div class="menu-mobile action ui-table-cell ui-mobile">
+                {% block menu-mobile %}<img src="{{ STATIC_URL }}images/md/navigation/ic_menu_white_18dp.png"/>{% endblock %}
+            </div>
+
+			<div class="logo ui-table-cell">GUADIABIKE</div>
 
             <div id="large-mode">&nbsp;</div>
 
-			<div class="menu jp-cell">
+			<div class="menu ui-table-cell">
                 <div class="options">
                     <div class="option" onclick="location.href='{% url 'home' %}';">Inicio</div>
 
@@ -29,11 +33,12 @@
                 </div>
 			</div>
 
-			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/action/ic_search_white_18dp.png"/></div>
-			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/communication/ic_message_white_18dp.png"/></div>
-			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/social/ic_person_white_18dp.png"/></div>
-			<div class="action jp-cell"><img src="{{ STATIC_URL }}images/md/navigation/ic_more_vert_white_16dp.png"/></div>
-
+			<div class="action ui-table-cell"><img src="{{ STATIC_URL }}images/md/action/ic_search_white_18dp.png"/></div>
+			<div class="action ui-table-cell"><img src="{{ STATIC_URL }}images/md/communication/ic_message_white_18dp.png"/></div>
+			<div class="action ui-table-cell"><img src="{{ STATIC_URL }}images/md/social/ic_person_white_18dp.png"/></div>
+            <!--
+			<div class="action ui-table-cell"><img src="{{ STATIC_URL }}images/md/navigation/ic_more_vert_white_16dp.png"/></div>
+            -->
 		</div>
 	</div>
 

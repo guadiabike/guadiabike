@@ -7,7 +7,6 @@
 /* USER INTERFACE COMMON - HELPERS
  -------------------------------------------------------------------------------------------------------- */
 
-
 /* TABLES */
 
 .ui-table { display: table; }
@@ -34,6 +33,7 @@
 
 /* BLOCKS */
 
+.ui-no-display  { display: none; }
 .ui-block-50    { width: 50%; }
 .ui-clear-both  { clear:both; }
 .ui-block       { display:block;}
@@ -41,15 +41,10 @@
 
 .ui-nodecoration { text-decoration: none; color: white; }
 
-
 .ui-fr      { float: right; }
 .ui-fl      { float: left; }
 
 /* TIPOGRAPHY */
-
-.ui-large   { font-size: 1.2em; }
-.ui-small   { font-size: 0.7em; }
-.ui-minimum { font-size: 0.5em; }
 
 .ui-uppercase   {text-transform:uppercase;}
 .ui-lowercase   {text-transform:lowercase;}
@@ -68,17 +63,23 @@
 .ui-button-3 { position: absolute; bottom: -20px; right: 120px;  width: 40px; height: 40px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; cursor: pointer;}
 .ui-button-4 { position: absolute; bottom: -20px; right: 170px;  width: 40px; height: 40px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; cursor: pointer;}
 
-/* MOBILE - COMMON
+/* PC - COMMON
  -------------------------------------------------------------------------------------------------------- */
+
+.ui-mobile  { display: none; }
+.ui-pc      { display: inline; }
 
 .ui-fluid-container { display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap;  }
 .ui-fluid-container .c1, .ui-fluid-container .c2, .ui-fluid-container .c3,
 .ui-fluid-container .c4, .ui-fluid-container .c5 { width: 100%; }
 
-/* PC - FULL SIZE
+/* MOBILE - COMMON
  -------------------------------------------------------------------------------------------------------- */
 
-@media (min-width: 800px) {
+@media screen and (max-width: 700px) {
+
+.ui-mobile  { display: table-cell; }
+.ui-pc      { display: none }
 
 .ui-fluid-container .c1 { width: 40%; }
 .ui-fluid-container .c2 { width: 60%; }
