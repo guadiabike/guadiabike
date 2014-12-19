@@ -36,6 +36,11 @@ $(window).scroll(function() {
 function index_menu_mobile_slide () {
 
     if ($('#jp-menu-mobile').is(":visible")) {
+        $('#jp-main-shadow').animate({
+          opacity: 0.10
+        }, 300, function() {
+            $('#jp-main-shadow').hide();
+        });
         $('#jp-menu-mobile')
         .stop()
         .animate({
@@ -46,6 +51,9 @@ function index_menu_mobile_slide () {
         });
 
     } else {
+        $('#jp-main-shadow').show().animate({
+          opacity: 0.80
+        }, 300);
         $('#jp-menu-mobile').show()
         .stop()
         .animate({
