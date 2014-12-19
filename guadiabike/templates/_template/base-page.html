@@ -5,13 +5,20 @@
 
 {% block header %}
 
+    <!-- MENU DE NAVEGACION MOBILE
+	---------------------------------------------------------------------------------------- -->
+
+    <div id="jp-menu-mobile" class="jp-menu-mobile" style="display: none;">
+        <div style="">Contenido</div>
+    </div>
+
 	<!-- HEADER - Logo y navegación
 	---------------------------------------------------------------------------------------- -->
 
 	<div id="jp-main-header" class="jp-main-header">
 		<div class="content ui-table">
 
-            <div class="menu-mobile action ui-table-cell ui-mobile">
+            <div id="jp-main-header-button-menu" class="action ui-table-cell ui-mobile">
                 {% block menu-mobile %}<img src="{{ STATIC_URL }}images/md/navigation/ic_menu_white_24dp.png"/>{% endblock %}
             </div>
 

@@ -21,7 +21,8 @@ html, body {
 
 .jp-section { display: table-cell; width: 65%; vertical-align: top; }
 .jp-section .box { position: relative; margin: 10px; border-radius: 3px;}
-.jp-section .box .box-event-back { cursor: pointer;  position: absolute; top: 0px; left: -52px; width: 48px; height: 48px;  }
+.jp-section .box .box-event-back { cursor: pointer;  position: absolute; top: 0px; left: -52px; width: 48px; height: 48px; }
+
 .jp-section .box .box-header { position: relative; padding: 10px; min-height: 100px; }
 .jp-section .box .box-header .image { float:left; margin: 10px;	}
 .jp-section .box .box-header .image img { width:80px; height:80px; }
@@ -33,9 +34,18 @@ html, body {
 .jp-section .box .box-header .right .number { font-weight: bold; font-size: 1.3em; display:block; text-align: right;}
 .jp-section .box .box-header .right .info { font-size: 1.3em; display:block; text-align: right;}
 .jp-section .box .box-header .action1 { position: absolute; right: 10px; cursor: pointer; cursor: hand;}
+
 .jp-section .box .box-navigation { padding: 15px 10px 15px 10px; }
 .jp-section .box .box-navigation .options { display: table; width: 100%; text-align: center; }
 .jp-section .box .box-navigation .options .option { display: table-cell; margin: 0 15px 0 15px; padding: 0 5px 5px 5px; font-weight: bold; cursor: pointer; cursor: hand; }
+
+.jp-section .box .box-content { padding: 10px 20px 20px 20px;  }
+.jp-section .box .separator { border-top: 1px solid #f3f3f3;  margin: 0 20px 0 20px;}
+
+
+.field { float: left; padding: 5px 25px 5px 0px; min-width: 100px;}
+.field .field-data { display:block; line-height: 1.5em;  }
+.field .field-title { display:block; line-height: 1em; font-size: 0.8em; }
 
 
 /** Larger Screens - desktops and tablets
@@ -50,9 +60,10 @@ html, body {
 
 html, body { min-width: 300px; }
 
-/* ELEMENTOS DE DISPOSITIVO MOVIL NO SE MUSTRAN */
+/* ELEMENTOS DE DISPOSITIVO MOVIL NO SE MUESTRAN */
 
-#jp-menu-mobile { display: none; }
+.jp-menu-mobile { position: absolute; left: 0px; top:40px; background-color:white; height:100%; width:0px; z-index: 10; display: none;  }
+
 
 /* CABECERA DEL MENÚ DE APLICACION */
 

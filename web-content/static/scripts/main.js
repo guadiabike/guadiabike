@@ -1,3 +1,10 @@
+$(document).ready(function() {
+
+    // Eventos.
+    $('#jp-main-header-button-menu').click(index_menu_mobile_slide);
+
+});
+
 $(window).scroll(function() {
 
     if($('#large-mode').is(':visible')) {
@@ -22,6 +29,28 @@ $(window).scroll(function() {
     }
 });
 
-function index_slide_menu() {
 
+/**
+ * Función asociada
+ */
+function index_menu_mobile_slide () {
+
+    if ($('#jp-menu-mobile').is(":visible")) {
+        $('#jp-menu-mobile')
+        .stop()
+        .animate({
+          width: "0",
+          opacity: 0.1
+        }, 300, function(){
+            $('#jp-menu-mobile').hide();
+        });
+
+    } else {
+        $('#jp-menu-mobile').show()
+        .stop()
+        .animate({
+          width: "90%",
+          opacity: 0.99
+        }, 300, function(){});
+    }
 }
