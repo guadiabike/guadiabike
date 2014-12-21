@@ -4,17 +4,17 @@ html, body {
     margin: 0; padding: 0;
 }
 
-.jp-main-shadow { position: fixed; z-index: 50; width: 100%; height: 100%;
-    top: 0px; left: 0px; background-color: grey; opacity: 0.75; filter: alpha(opacity=75); }
-
 /* CABECERA DEL MENÚ DE APLICACION */
 
 .jp-main-header {  position: fixed; top:0; left:0; width:100%; height:70px; z-index: 100; }
 .jp-main-header .content { width: 80%; min-width: 700px; float: right; height:100%; }
 .jp-main-header .content .logo { padding: 0 25px 0 20px; line-height: 1.5em; font-size: 2.5em; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; vertical-align: middle; }
-.jp-main-header .content .menu { vertical-align: middle; width: 100%; }
+.jp-main-header .content .menu { position: static; display: table-cell; left: auto; top: auto; background-color: transparent; height: auto; width: 100%; vertical-align: middle; z-index: auto;  }
+.jp-main-header .content .menu-in {}
 .jp-main-header .content .menu .option { display: inline-block; padding: 0 10px 0 15px; font-weight: bold; cursor: pointer; cursor: hand; }
 .jp-main-header .content .action { vertical-align: middle; padding: 0 5px 0 5px; cursor: pointer; cursor: hand; }
+
+/* CONTENIDO DE LA APLICACION */
 
 .jp-main-content { display:table;	min-height: 100%; float: right; width: 80%; min-width: 700px; padding-top: 70px; }
 
@@ -50,6 +50,10 @@ html, body {
 .field .field-data { display:block; line-height: 1.5em;  }
 .field .field-title { display:block; line-height: 1em; font-size: 0.8em; }
 
+/* CAPA DE INHABILITACION GLOBAL */
+
+.jp-main-shadow { display: none; }
+
 
 /** Larger Screens - desktops and tablets
     ---------------------------------------------------------------------------
@@ -63,18 +67,18 @@ html, body {
 
 html, body { min-width: 300px; }
 
-/* ELEMENTOS DE DISPOSITIVO MOVIL NO SE MUESTRAN */
-
-.jp-menu-mobile { position: fixed; left: 0px; top:40px; background-color:white; height:100%; width:0px; z-index: 100; display: none;  }
-
 
 /* CABECERA DEL MENÚ DE APLICACION */
 
 .jp-main-header { height: 40px;  }
 .jp-main-header .content { width: 100%; min-width: 300px; }
 .jp-main-header .content .logo { padding: 0 5px 0 5px; font-size: 1.4em; }
-.jp-main-header .content .menu .options { display: none; }
+.jp-main-header .content .menu {  display: block; position: fixed; left: 0px; top:41px; background-color:white; height:100%; width: 0px; z-index: 50; overflow: hidden;     }
+.jp-main-header .content .menu-in { display: block; width: 90%; }
+.jp-main-header .content .menu .option { display: block; padding: 20px 10px 0 45px; font-weight: bold; color: grey; cursor: pointer; cursor: hand; }
 .jp-main-header .content .action { padding: 0 10px 0 10px; }
+
+/* CONTENIDO DE LA APLICACION */
 
 .jp-main-content { display: block; float: none; width: 100%; min-width: 0; min-height: auto; padding-top: 43px;}
 
@@ -90,5 +94,11 @@ html, body { min-width: 300px; }
 .jp-section .box .box-header .right .number { font-size: 1.1em; }
 .jp-section .box .box-header .right .info { font-size: 1.1em; }
 .jp-section .box .box-navigation .option { margin: 0 5px 0 10px; padding: 0 3px 3px 3px; font-size: 0.95em; }
+
+/* CAPA DE INHABILITACION GLOBAL */
+
+.jp-main-shadow { display: none; position: fixed; z-index: 25; width: 100%; height: 100%;
+    top: 0px; left: 0px; background-color: grey; opacity: 0.75; filter: alpha(opacity=75); }
+
 
 }

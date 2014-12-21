@@ -39,6 +39,7 @@
 	{% block js %}
     <!-- JS Libraries -->
         <script src="{{ STATIC_URL }}scripts/jquery.js"></script>
+        <script src="{{ STATIC_URL }}scripts/jquery-ui.min.js"></script>
         <script src="{{ STATIC_URL }}scripts/main.js"></script>
 	{% endblock %}
 
@@ -54,7 +55,7 @@
 
 <body {% block bodyattr %}{% endblock %}>
 
-    <div id="jp-main-shadow" class="jp-main-shadow ui-no-display"></div>
+    <div class="jp-main-shadow"></div>
 
     {% block header %}{% endblock %}
 
