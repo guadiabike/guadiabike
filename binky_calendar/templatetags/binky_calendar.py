@@ -68,7 +68,7 @@ class EventoLastNode(Node):
         evento_id = None
         try:
             # Obtenemos la siguiente ruta reciente.
-            p = Evento.objects.filter(hora__lte=datetime.datetime.now())[0]
+            p = Evento.objects.filter(hora__lte=datetime.datetime.now()).order_by('-hora')[0]
             evento_id = p.id
             nAsistentes = len(AsisteEvento.objects.filter(evento_id=evento_id, asiste=True))
 
