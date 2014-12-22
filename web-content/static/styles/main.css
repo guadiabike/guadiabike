@@ -23,9 +23,9 @@ html, body {
 .jp-nav .box .section { padding: 10px; }
 
 .jp-section { display: table-cell; width: 65%; vertical-align: top; }
-.jp-section .box { position: relative; margin: 10px; border-radius: 3px;}
-.jp-section .box .box-event-back { cursor: pointer;  position: absolute; top: 0px; left: -52px; width: 48px; height: 48px; }
 
+.jp-section .box { position: relative; margin: 10px 10px 25px 10px; border-radius: 3px; }
+.jp-section .box .box-event-back { cursor: pointer;  position: absolute; top: 0px; left: -52px; width: 48px; height: 48px; }
 .jp-section .box .box-header { position: relative; padding: 10px; min-height: 100px; }
 .jp-section .box .box-header .image { float:left; margin: 10px;	}
 .jp-section .box .box-header .image img { width:80px; height:80px; }
@@ -44,7 +44,6 @@ html, body {
 
 .jp-section .box .box-content { padding: 10px 20px 20px 20px;  }
 .jp-section .box .separator { border-top: 1px solid #f3f3f3;  margin: 0 20px 0 20px;}
-
 
 .field { float: left; padding: 5px 25px 5px 0px; min-width: 100px;}
 .field .field-data { display:block; line-height: 1.5em;  }
@@ -85,7 +84,7 @@ html, body { min-width: 300px; }
 .jp-nav { display: block; width: 100%; vertical-align: top; }
 
 .jp-section { display: block; width: 100%; vertical-align: top; }
-.jp-section .box { position: relative; margin: 3px; border-radius: 3px;}
+.jp-section .box { position: relative; margin: 3px 3px 25px 3px; border-radius: 3px;}
 .jp-section .box .box-header { padding: 5px; }
 .jp-section .box .box-header .image img { width:60px; height:60px; }
 .jp-section .box .box-header .center .title { font-size: 1.3em; }

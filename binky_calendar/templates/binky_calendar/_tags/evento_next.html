@@ -3,53 +3,49 @@
 
 {% if nextruta %}
 
-    <div class="jp-section">
-        <div class="box">
+    <div class="box">
 
-            <div class="box-header">
-                <div class="image ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">
-                        <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}"/>
-                </div>
-                <div class="center">
-                    <span class="title ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">Próxima salida</span>
-                    <span class="subtitle ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">{{ nextruta.ruta.nombre }}</span>
-                    <span class="subsubtitle">{{ nextruta.tiempoRestante }}</span>
-                </div>
-                <div class="right">
-                    <span id="evento-next-number" class="number">{{ nAsistentes }}</span>
-                    <span class="info">asistentes</span>
-                </div>
-
-                <div class="action1"><img src="{{ STATIC_URL }}images/md/navigation/ic_more_vert_grey600_16dp.png   "/></div>
-                <div style="clear: both;"></div>
+        <div class="box-header">
+            <div class="image ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">
+                    <img src="{{ MEDIA_URL }}{{ nextruta.ruta.imagen_principal }}"/>
+            </div>
+            <div class="center">
+                <span class="title ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">Próxima salida</span>
+                <span class="subtitle ui-clickeable" onclick="location.href='{% url 'calendar:evento_detalle' nextruta.id %}';">{{ nextruta.ruta.nombre }}</span>
+                <span class="subsubtitle">{{ nextruta.tiempoRestante }}</span>
+            </div>
+            <div class="right">
+                <span id="evento-next-number" class="number">{{ nAsistentes }}</span>
+                <span class="info">asistentes</span>
             </div>
 
-            <div class="box-content">
+            <div class="action1"><img src="{{ STATIC_URL }}images/md/navigation/ic_more_vert_grey600_16dp.png   "/></div>
+            <div style="clear: both;"></div>
+        </div>
 
-                <div class="field">
-                <span class="field-data">{{ nextruta.hora |date:"l, d \d\e F \d\e Y H:i" }}</span><span class="field-title">Fecha y Hora</span>
-                </div>
+        <div class="box-content">
 
-                <div class="field">
-                <span class="field-data">{{ nextruta.ruta.distancia }} kms</span><span class="field-title">Distancia estimada</span>
-                </div>
-
-                <div style="clear: both;"></div>
-
+            <div class="field">
+            <span class="field-data">{{ nextruta.hora |date:"l, d \d\e F \d\e Y H:i" }}</span><span class="field-title">Fecha y Hora</span>
             </div>
 
-            <div class="separator"></div>
-
-
-            <div id="bk_evento_next_ruta_{{ nextruta.id }}" class="box-content">
-
-                {% include "binky_calendar/_ajax/evento_next_asistencia.html" %}
-
-
+            <div class="field">
+            <span class="field-data">{{ nextruta.ruta.distancia }} kms</span><span class="field-title">Distancia estimada</span>
             </div>
+
+            <div style="clear: both;"></div>
 
         </div>
 
+        <div class="separator"></div>
+
+
+        <div id="bk_evento_next_ruta_{{ nextruta.id }}" class="box-content">
+
+            {% include "binky_calendar/_ajax/evento_next_asistencia.html" %}
+
+
+        </div>
 
     </div>
 
