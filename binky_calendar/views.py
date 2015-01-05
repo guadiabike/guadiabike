@@ -7,7 +7,7 @@ from models import Evento, AsisteEvento
 from django.views.decorators.csrf import requires_csrf_token
 
 
-@login_required
+#@login_required
 def binky_calendar_evento_detalle(request, evento_id):
 
     try:
