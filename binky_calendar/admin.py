@@ -76,9 +76,21 @@ class AsisteEventoAdmin(admin.ModelAdmin):
 
     ordering = ('id',)
 
+
+class ImagenEventoAdmin(admin.ModelAdmin):
+    list_display = ('id', 'imagen', 'evento')
+    readonly_fields = ('id',)
+    fieldsets = (
+        (None, {
+            'fields': ('id', 'imagen', 'evento'),
+        }),
+    )
+
+    ordering = ('id',)
+
 admin.site.register(models.Dificultad, DificultadAdmin)
 admin.site.register(models.EventoTipo, EventoTipoAdmin)
 admin.site.register(models.Ruta, RutaAdmin)
 admin.site.register(models.Evento, EventoAdmin)
 admin.site.register(models.AsisteEvento, AsisteEventoAdmin)
-
+admin.site.register(models.ImagenEvento, ImagenEventoAdmin)

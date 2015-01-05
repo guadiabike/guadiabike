@@ -30,7 +30,7 @@
 
             <div class="box-navigation">
                 <div class="options">
-                    <span id="box-option-information" class="option option-selected">Informacion</span>
+                    <span id="box-option-information" class="option option-selected">Información</span>
                     <span id="box-option-recorrido" class="option">Recorrido</span>
                     <span id="box-option-comentarios" class="option">Comentarios</span>
                     <span id="box-option-multimedia" class="option">Multimedia</span>
@@ -78,7 +78,12 @@
                 </div>
 
                 <div id="box-option-multimedia-tab" class="box-tab" style="display: none;">
-                    Multimedia
+
+                    {% for imagen in nextruta.imagenes.all %}
+                        <img class="box-image ui-clickeable" src="{{ imagen.link }}" onclick="window.open('{{ imagen.link }}','_blank');" />
+                    {% endfor %}
+
+                    <div class="ui-clear-both"></div>
                 </div>
 
             </div>

@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
 from guadiabike.models import Modalidad
+from binky_media.models import Imagen
 from django.utils import timezone
 
 
@@ -99,12 +100,13 @@ class Evento(models.Model):
 #    fecha = models.DateField(blank=False)
     hora = models.DateTimeField(blank=False)
     asistentes = models.ManyToManyField(User, through='AsisteEvento', related_name='asistentes')
+    imagenes = models.ManyToManyField(Imagen, through='ImagenEvento', related_name='imagenes', verbose_name="Lista de imágenes")
     udate = models.DateField(default=datetime.now(), editable=False)
     uinformation = models.CharField(default='LOADDATA', max_length=200, editable=False)
     actived = models.BooleanField(default=True, editable=False)
 
     def __unicode__(self):
-        return u"%s %s" % (self.eventoTipo,self.ruta)
+        return u"%s %s" % (self.eventoTipo, self.ruta)
 
     def tiempoRestante(self):
         try:
@@ -132,3 +134,20 @@ class AsisteEvento(models.Model):
         verbose_name = 'Asiste a evento'
         verbose_name_plural = 'Asiste a evento'
         unique_together = (('user', 'evento'),)
+
+
+class ImagenEvento(models.Model):
+    imagen = models.ForeignKey(Imagen)
+    evento = models.ForeignKey(Evento)
+    uuser = models.ForeignKey(User, default=1, editable=False)
+    udate = models.DateField(default=datetime.now(), editable=False)
+    uinformation = models.CharField(default='LOADDATA', max_length=200, editable=False)
+
+    def __unicode__(self):
+        return str(self.imagen) + ' pertenece al evento ' + str(self.evento)
+
+    class Meta:
+        verbose_name = 'Imagen de evento'
+        verbose_name_plural = 'Imagenes de evento'
+        unique_together = (('imagen', 'evento'),)
+

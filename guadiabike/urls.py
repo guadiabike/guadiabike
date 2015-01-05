@@ -8,7 +8,7 @@ from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'guadiabike.views.login', name='home'),
+    url(r'^$', 'guadiabike.views.home', name='home'),
 
     # url(r'^blog/', include('blog.urls')),
 

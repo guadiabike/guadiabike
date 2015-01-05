@@ -7,12 +7,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 
-@login_required
 def index(request):
     return render(request, 'page/index.html')
 
 
-@login_required
+
 def home(request):
     return render(request, 'page/index.html')
 

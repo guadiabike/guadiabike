@@ -43,6 +43,9 @@ html, body {
 .jp-section .box .box-navigation .options .option { display: table-cell; margin: 0 15px 0 15px; padding: 0 5px 5px 5px; font-weight: bold; cursor: pointer; cursor: hand; }
 
 .jp-section .box .box-content { padding: 10px 20px 20px 20px;  }
+
+.jp-section .box .box-content .box-image { width: 100%; padding: 5px;}
+
 .jp-section .box .separator { border-top: 1px solid #f3f3f3;  margin: 0 20px 0 20px;}
 
 .field { float: left; padding: 5px 25px 5px 0px; min-width: 100px;}
