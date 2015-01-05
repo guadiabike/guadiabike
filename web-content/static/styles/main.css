@@ -12,7 +12,8 @@ html, body {
 .jp-main-header .content .menu { position: static; display: table-cell; left: auto; top: auto; background-color: transparent; height: auto; width: 100%; vertical-align: middle; z-index: auto;  }
 .jp-main-header .content .menu-in {}
 .jp-main-header .content .menu .option { display: inline-block; padding: 0 10px 0 15px; font-weight: bold; cursor: pointer; cursor: hand; }
-.jp-main-header .content .action { vertical-align: middle; padding: 0 5px 0 5px; cursor: pointer; cursor: hand; }
+.jp-main-header .content .menu .option .icon { display: none; }
+.jp-main-header .content .action { vertical-align: middle; padding: 0 20px 0 5px; cursor: pointer; cursor: hand; }
 
 /* CONTENIDO DE LA APLICACION */
 
@@ -75,9 +76,10 @@ html, body { min-width: 300px; }
 .jp-main-header { height: 40px;  }
 .jp-main-header .content { width: 100%; min-width: 300px; }
 .jp-main-header .content .logo { padding: 0 5px 0 5px; font-size: 1.4em; }
-.jp-main-header .content .menu {  display: block; position: fixed; left: 0px; top:41px; background-color:white; height:100%; width: 0px; z-index: 50; overflow: hidden; padding-top: 20px; }
+.jp-main-header .content .menu {  display: block; position: fixed; left: 0px; top:41px; background-color:white; height:100%; width: 0px; z-index: 50; overflow: hidden;}
 .jp-main-header .content .menu-in { display: block; width: 90%; }
 .jp-main-header .content .menu .option { display: block; padding: 15px 10px 15px 45px; font-weight: bold; color: grey; cursor: pointer; cursor: hand; }
+.jp-main-header .content .menu .option .icon { display: inline-block; margin-right: 10px; }
 .jp-main-header .content .action { padding: 0 10px 0 10px; }
 
 /* CONTENIDO DE LA APLICACION */

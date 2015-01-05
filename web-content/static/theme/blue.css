@@ -38,4 +38,6 @@ html, body { background-color: #F1F3F2; color: #8e8e8e; }
 
 .jp-nav { border: none; }
 
+.jp-main-header .content .menu .option { border-bottom: 1px solid #f5f5f5; }
+
 }

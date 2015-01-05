@@ -52,4 +52,4 @@ def logout(request):
     except:
         pass
 
-    return redirect('login')
+    return redirect('home')
