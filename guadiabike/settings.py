@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'binky_calendar',
     'binky_admin',
     'binky_user',
+    'binky_media',
 )
 
 TEMPLATE_LOADERS = (
