@@ -45,7 +45,7 @@ html, body {
 
 .jp-section .box .box-content { padding: 10px 20px 20px 20px;  }
 
-.jp-section .box .box-content .box-image { width: 100%; padding: 5px;}
+.jp-section .box .box-content .box-image { width: 100%; }
 
 .jp-section .box .separator { border-top: 1px solid #f3f3f3;  margin: 0 20px 0 20px;}
 
