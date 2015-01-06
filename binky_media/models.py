@@ -13,7 +13,7 @@ class Imagen(models.Model):
     udate = models.DateField(default=datetime.now(), editable=False)
 
     def __unicode__(self):
-        return self.link
+        return self.nombre + ' ' + self.link
 
     class Meta:
         verbose_name = 'Imagen'
