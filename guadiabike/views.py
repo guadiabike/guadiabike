@@ -11,17 +11,21 @@ def index(request):
     return render(request, 'page/index.html')
 
 
-
 def home(request):
     return render(request, 'page/index.html')
+
+
+@login_required
+def profile(request):
+    return render(request, 'accounts/profile.html')
 
 
 # Accounts
 def login(request):
 
-    # Si usuario ya está logado, lo devolvemos a home.
+    # Si usuario ya está logado, vamos al perfil.
     if request.user.is_authenticated():
-        return redirect('home')
+        return redirect('profile')
 
     # Se define el formulario
     form = AuthenticationForm()

@@ -1,6 +1,15 @@
 html, body { background-color: #F1F3F2; color: #8e8e8e; }
 
+
+/* COMUN */
+
+input[type="text"] { border: 1px solid #cccccc; }
+
+/* CABECERA DEL MENÚ DE APLICACION */
+
 .jp-main-header { background-color: #008ab9; color: white; border-top: 1px solid #0083b7; }
+
+/* CONTENIDO DE LA APLICACION */
 
 .jp-nav { background-color: white; border-left: 1px solid #f4f6f5; }
 .jp-nav .box .section { border-bottom: 1px solid #F1F3F2;}
@@ -14,10 +23,14 @@ html, body { background-color: #F1F3F2; color: #8e8e8e; }
 .jp-section .box .box-header .right .number { color: #3f3f3f; }
 .jp-section .box .box-header .right .info { color: #7b7b7b; }
 
+.jp-section .box .box-form .title { color: #7b7b7b; font-weight: bold;  }
+
 .jp-section .box .box-navigation .option-selected { border-bottom: 2px solid #0185b6; color: #1e1e1e; }
 .jp-text-high { color: #43a7cb; font-weight: bold; }
 
 .field .field-title { color: #cccccc; }
+
+.field-read-only { background-color: #efefef; }
 
 /* BUTTONS
  -------------------------------------------------------------------------------------------------------- */

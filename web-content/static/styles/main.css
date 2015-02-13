@@ -4,6 +4,10 @@ html, body {
     margin: 0; padding: 0;
 }
 
+/* COMUN */
+
+input[type="text"] { appearance: none; box-shadow: none; border-radius: none; padding: 2px 5px 2px 5px; }
+
 /* CABECERA DEL MENÚ DE APLICACION */
 
 .jp-main-header {  position: fixed; top:0; left:0; width:100%; height:70px; z-index: 100; }
@@ -25,17 +29,17 @@ html, body {
 
 .jp-section { display: table-cell; width: 65%; vertical-align: top; }
 
-.jp-section .box { position: relative; margin: 10px 10px 25px 10px; border-radius: 3px; }
+.jp-section .box { position: relative; margin: 10px 10px 10px 10px; border-radius: 3px; }
 .jp-section .box .box-event-back { cursor: pointer;  position: absolute; top: 0px; left: -52px; width: 48px; height: 48px; }
-.jp-section .box .box-header { position: relative; padding: 10px; min-height: 100px; }
+.jp-section .box .box-header { position: relative; padding: 10px;  }
 .jp-section .box .box-header .image { float:left; margin: 10px;	}
 .jp-section .box .box-header .image img { width:80px; height:80px; }
-.jp-section .box .box-header .center { float:left; margin: 10px; }
+.jp-section .box .box-header .center { float: left; margin: 10px; }
 .jp-section .box .box-header .center .title { font-size: 1.7em; display:block; line-height: 1.2em; }
 .jp-section .box .box-header .center .subtitle { display: block; line-height: 2em;}
 .jp-section .box .box-header .center .subsubtitle { display: block; line-height: 2em; font-size: 0.9em; }
-.jp-section .box .box-header .right { float:right;  margin: 40px 10px 10px 10px; }
-.jp-section .box .box-header .right .number { font-weight: bold; font-size: 1.3em; display:block; text-align: right;}
+.jp-section .box .box-header .right { float: right;  margin: 10px; }
+.jp-section .box .box-header .right .number { font-weight: bold; font-size: 1.3em; display:block; text-align: right; padding-top: 40px}
 .jp-section .box .box-header .right .info { font-size: 1.3em; display:block; text-align: right;}
 .jp-section .box .box-header .action1 { position: absolute; right: 10px; cursor: pointer; cursor: hand;}
 
@@ -44,8 +48,13 @@ html, body {
 .jp-section .box .box-navigation .options .option { display: table-cell; margin: 0 15px 0 15px; padding: 0 5px 5px 5px; font-weight: bold; cursor: pointer; cursor: hand; }
 
 .jp-section .box .box-content { padding: 10px 20px 20px 20px;  }
-
 .jp-section .box .box-content .box-image { width: 100%; }
+
+.jp-section .box .box-form { padding: 10px 20px 20px 20px;  }
+.jp-section .box .box-form .title { padding: 10px 10px 10px 20px; width: 100%; font-size: 1.1em; }
+.jp-section .box .box-form .field { width: 60%;}
+.jp-section .box .box-form .field .field-data { width: 100%;}
+.jp-section .box .box-form .field .field-title { margin-top: 5px;}
 
 .jp-section .box .separator { border-top: 1px solid #f3f3f3;  margin: 0 20px 0 20px;}
 

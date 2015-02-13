@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     # Login
     # url(r'^login/$', 'guadiabike.views.login', name='login'),
 
+    url(r'^accounts/profile/$', 'guadiabike.views.profile', name='profile'),
     url(r'^accounts/login/$', 'guadiabike.views.login', name='login'),
     url(r'^accounts/logout/$', 'guadiabike.views.logout', name='logout'),
     url(r'^home/$', 'guadiabike.views.home', name='home'),

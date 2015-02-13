@@ -1,19 +1,11 @@
-{% extends "_template/base.html" %}
+{% extends "_template/base-page.html" %}
 
 {% load i18n %}
+{% load binky_calendar %}
 
 {% block extrastyle %}
 
     <style>
-        .app-login {
-            min-height: initial;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .app-login div {
-            margin-top: 10px;
-        }
 
     </style>
 
@@ -21,64 +13,64 @@
 
 {% block content %}
 
-    <header class="app-bar promote-layer">
-      <div class="app-bar-container">
-        <div style="width: 60px;"></div>
-        <h1 class="logo">Guadiabike</h1>
-      </div>
-    </header>
+    <div class="jp-section">
+        <div class="box">
 
-    <main>
+            <div class="box-event-back ui-pc" onclick="location.href='{% url 'home' %}';"></div>
 
-        <!-- Login Code -->
+            <div class="box-content">
 
-        <ul class="guides-list container-medium" style="padding-top: 0px;">
+                <p style="text-align: center;">Introduce tu correo electrónico y contraseña</p>
 
+                <div style="clear: both;"></div>
 
-            <li class="guides-list__item theme--introduction-to-media g--last" style="width: 100%; margin-top: 0px;">
-            <div class="primary-content" style="text-align: center;">
-              <p style="margin-top: 0px;">Introduce tu correo electrónico y contraseña</p>
-            </div>
+                <br>
+                <div class="separator"></div>
 
-            <form method="post" action="{% url 'guadiabike.views.login' %}">
-		    {% csrf_token %}
-
-            <div class="secondary-content">
-
-                {% if form.errors %}
-                    <span class="icon-circle themed--background"><i class="icon icon-question"></i></span>
-                {% else %}
-                    <span class="icon-circle themed--background"><i class="icon icon-diamond"></i></span>
-                {% endif %}
+                <br>
 
 
-                <div style="height: 60px; text-align: center; "  class="small color--highlight">
+                <form method="post" action="{% url 'guadiabike.views.login' %}">
+    		    {% csrf_token %}
+
+                    {% if form.errors %}
+                        <span class="icon-circle themed--background"><i class="icon icon-question"></i></span>
+                    {% else %}
+                        <span class="icon-circle themed--background"><i class="icon icon-diamond"></i></span>
+                    {% endif %}
+
                     {% if form.errors %}
                     <span>Usuario o password incorrectos.</span>
                     {% endif %}
-                </div>
 
-                <div class="app-login bk-login" >
+                    <div class="field"></div>
 
-                  <div>
-                    {{ form.username }}
-                  </div>
+                    <div class="field">
+                    <span class="field-data">{{ form.username }}</span><span class="field-title">Usuario</span>
+                    </div>
 
-                  <div>
-                    {{ form.password }}
-                  </div>
+                    <div class="field">
+                    <span class="field-data">{{ form.password }}</span><span class="field-title">Password</span>
+                    </div>
 
-                  <input type="submit" value="Login" class="button--primary"/>
-                  <input type="hidden" name="next" value="{{ next }}" />
+                    <div class="field">
+                    <span class="field-data"><input type="submit" value="Login" class="button--primary"/>
+                    </div>
 
-                </div>
+                    <div style="clear: both;"></div>
+
+
+                    <input type="hidden" name="next" value="{{ next }}" />
+
+                </form>
 
             </div>
-            </form>
 
-            </li>
+        </div>
+    </div>
 
-          </ul>
-    </main>
+    <!-- RIGHT MENU -->
+
+
 
 {% endblock %}
