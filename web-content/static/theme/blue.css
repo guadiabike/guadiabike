@@ -40,7 +40,7 @@ input[type="text"] { border: 1px solid #cccccc; }
 .ic-content-undo-24 { background-image: url('../images/md/content/ic_undo_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
 .ic-navigation-check-24 { background-image: url('../images/md/navigation/ic_check_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
 .ic-navigation-cancel-24 { background-image: url('../images/md/navigation/ic_cancel_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
-
+.ic-action_autorenew-24 { background-image: url('../images/md/action/ic_autorenew_white_24dp.png'); background-position: center; background-repeat: no-repeat; }
 
 
 /** Larger Screens - desktops and tablets

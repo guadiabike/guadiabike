@@ -27,6 +27,11 @@
                         Inicio
                     </div>
 
+                    <div class="option" onclick="location.href='{% url 'calendar:main' %}';">
+                        <span class="icon"><img src="{{ STATIC_URL }}images/md/action/ic_schedule_grey600_48dp.png" height="10px"/></span>
+                        Calendario
+                    </div>
+
                     {% if user.is_authenticated %}
                         <div class="option" onclick="location.href='{% url 'logout' %}';">
                             <span class="icon"><img src="{{ STATIC_URL }}images/md/social/ic_person_outline_grey600_48dp.png" height="10px"/></span>

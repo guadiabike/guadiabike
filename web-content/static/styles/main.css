@@ -51,20 +51,22 @@ input[type="text"] { appearance: none; box-shadow: none; border-radius: none; pa
 .jp-section .box .box-content .box-image { width: 100%; }
 
 .jp-section .box .box-form { padding: 10px 20px 20px 20px;  }
-.jp-section .box .box-form .title { padding: 10px 10px 10px 20px; width: 100%; font-size: 1.1em; }
-.jp-section .box .box-form .field { width: 60%;}
-.jp-section .box .box-form .field .field-data { width: 100%;}
-.jp-section .box .box-form .field .field-title { margin-top: 5px;}
+.jp-section .box .box-form .title { margin: 10px 10px 10px 20px; width: 100%; font-size: 1.1em; }
+.jp-section .box .box-form .field { width: 100%; }
+.jp-section .box .box-form .field .field-data { float: left; width: 50%; clear: both;}
+.jp-section .box .box-form .field .field-title { float: left; margin-bottom: 5px; }
+.jp-section .box .box-form .field .field-info { float: left; margin-left: 20px; font-size: 0.8em; }
 
 .jp-section .box .separator { border-top: 1px solid #f3f3f3;  margin: 0 20px 0 20px;}
 
-.field { float: left; padding: 5px 25px 5px 0px; min-width: 100px;}
+.field { float: left; margin: 5px 25px 5px 0px; min-width: 100px;}
 .field .field-data { display:block; line-height: 1.5em;  }
 .field .field-title { display:block; line-height: 1em; font-size: 0.8em; }
 
 /* CAPA DE INHABILITACION GLOBAL */
 
-.jp-main-shadow { display: none; }
+.jp-main-shadow { display: none; position: fixed; z-index: 25; width: 100%; height: 100%;
+    top: 0px; left: 0px; background-color: grey; opacity: 0.75; filter: alpha(opacity=75); }
 
 
 /** Larger Screens - desktops and tablets
@@ -87,7 +89,7 @@ html, body { min-width: 300px; }
 .jp-main-header .content .logo { padding: 0 5px 0 5px; font-size: 1.4em; }
 .jp-main-header .content .menu {  display: block; position: fixed; left: 0px; top:41px; background-color:white; height:100%; width: 0px; z-index: 50; overflow: hidden;}
 .jp-main-header .content .menu-in { display: block; width: 90%; }
-.jp-main-header .content .menu .option { display: block; padding: 15px 10px 15px 45px; font-weight: bold; color: grey; cursor: pointer; cursor: hand; }
+.jp-main-header .content .menu .option { min-width: 150px; display: block; padding: 15px 10px 15px 45px; font-weight: bold; color: grey; cursor: pointer; cursor: hand; }
 .jp-main-header .content .menu .option .icon { display: inline-block; margin-right: 10px; }
 .jp-main-header .content .action { padding: 0 10px 0 10px; }
 
@@ -107,11 +109,5 @@ html, body { min-width: 300px; }
 .jp-section .box .box-header .right .number { font-size: 1.1em; }
 .jp-section .box .box-header .right .info { font-size: 1.1em; }
 .jp-section .box .box-navigation .option { margin: 0 5px 0 10px; padding: 0 3px 3px 3px; font-size: 0.95em; }
-
-/* CAPA DE INHABILITACION GLOBAL */
-
-.jp-main-shadow { display: none; position: fixed; z-index: 25; width: 100%; height: 100%;
-    top: 0px; left: 0px; background-color: grey; opacity: 0.75; filter: alpha(opacity=75); }
-
 
 }

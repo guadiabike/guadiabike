@@ -1,0 +1,27 @@
+{% extends "binky_calendar/_template/calendar-page.html" %}
+
+{% load i18n %}
+{% load binky_calendar %}
+{% load binky_user %}
+
+{% block menu-mobile %}<img onclick="location.href='{% url 'home' %}';" src="{{ STATIC_URL }}images/md/navigation/ic_arrow_back_white_24dp.png"/>{% endblock %}
+
+{% block content %}
+
+    <div class="jp-section">
+        <div class="box">
+            <div class="box-content">
+                No existen entradas en el calendario.
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block extrascripts %}
+<script>
+    $(document).ready(function() {
+    }
+</script>
+{% endblock %}

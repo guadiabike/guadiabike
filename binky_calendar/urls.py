@@ -9,6 +9,9 @@ from binky_calendar import views
 
 urlpatterns = patterns('',
 
+    # Calendario
+    url(r'^$', views.binky_calendar_main, name='main'),
+
     # Eventos
     url(r'^evento/detalle/(?P<evento_id>[0-9]+)/$', views.binky_calendar_evento_detalle, name='evento_detalle'),
 

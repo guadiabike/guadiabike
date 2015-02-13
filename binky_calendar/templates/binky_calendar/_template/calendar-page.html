@@ -1,0 +1,19 @@
+{% extends "_template/base-page.html" %}
+
+{% block nav %}
+
+		<div class="jp-nav">
+			<div class="box">
+
+				<div class="section ui-clickeable" onclick="location.href='{% url 'home' %}';">
+					<div class="title">Inicio</div>
+				</div>
+
+				<div class="section ui-clickeable" onclick="location.href='{% url 'home' %}';">
+					<div class="title">Histórico de salidas</div>
+				</div>
+
+			</div>
+		</div>
+
+{% endblock %}

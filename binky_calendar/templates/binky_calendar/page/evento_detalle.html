@@ -2,12 +2,15 @@
 
 {% load i18n %}
 {% load binky_calendar %}
+{% load binky_user %}
 
 {% block menu-mobile %}<img onclick="location.href='{% url 'home' %}';" src="{{ STATIC_URL }}images/md/navigation/ic_arrow_back_white_24dp.png"/>{% endblock %}
 
 {% block content %}
 
     {% if nextruta %}
+
+
 
     <div class="jp-section">
         <div class="box">
@@ -84,6 +87,11 @@
                     {% endfor %}
 
                     <div class="ui-clear-both"></div>
+
+                    {% if request.user|has_group:"administradores" or request.user|has_group:"editores" %}
+                        <div class="ui-button-1 theme-button-color ic-action_autorenew-24" onclick="binky_calendar_evento_detalle_renew()"></div>
+                    {% endif %}
+
                 </div>
 
             </div>
@@ -119,6 +127,10 @@
         {%  else %}
             $('#box-option-recorrido-tab').html('<span class="ui-color-soft">{{ nextruta.ruta.descripcion }}</span>');
         {% endif %}
+    }
+
+    function binky_calendar_evento_detalle_renew() {
+        jp_main_modal_show();
     }
 
 </script>

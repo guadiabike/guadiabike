@@ -18,6 +18,10 @@ def binky_calendar_evento_detalle(request, evento_id):
     return render(request, 'binky_calendar/page/evento_detalle.html', {'nextruta': p})
 
 
+def binky_calendar_main(request):
+
+    return render(request, 'binky_calendar/page/main.html', )
+
 # AJAX VIEWS
 # -------------------------------------------------------------------------------------
 

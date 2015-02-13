@@ -47,19 +47,27 @@
                     <br>
 
                     <div class="field">
-                    <input type="text" class="field-data field-read-only" value="{{ request.user.username}}" readonly></input><span class="field-title">Usuario</span>
+                        <span class="field-title">Usuario</span>
+                        <input type="text" class="field-data field-read-only" value="{{ request.user.username}}" readonly/>
+                        <span class="field-info"></span>
                     </div>
 
                     <div class="field">
-                    <input type="text" class="field-data" value="{{ request.user.first_name}}"></input><span class="field-title">Nombre</span>
+                        <span class="field-title">Nombre</span>
+                        <input class="field-data" type="text"  value="{{ request.user.first_name}}"/>
+                        <span class="field-info"></span>
                     </div>
 
                     <div class="field">
-                    <input type="text" class="field-data" value="{{ request.user.last_name}}"></input><span class="field-title">Apellidos</span>
+                        <span class="field-title">Apellidos</span>
+                        <input type="text" class="field-data" value="{{ request.user.last_name}}"/>
+                        <span class="field-info"></span>
                     </div>
 
                     <div class="field">
-                    <input type="text" class="field-data" value="{{ request.user.email}}"></input><span class="field-title">Email</span>
+                        <span class="field-title">Email</span>
+                        <input type="text" class="field-data field-read-only" value="{{ request.user.email}}" readonly/>
+                        <span class="field-info"></span>
                     </div>
 
 

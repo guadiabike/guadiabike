@@ -17,6 +17,7 @@ def binky_admin_index(request):
 
 
 @login_required
+@user_passes_test(security.has_group_administradores)
 def binky_admin_user_invitation(request):
     if request.method == 'POST':
         formulario = UserInvitationForm(request.POST)

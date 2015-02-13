@@ -29,7 +29,7 @@ $(window).scroll(function() {
 
 
 /**
- * Función asociada
+ * Función asociada al menú en display.
  */
 function index_menu_mobile_slide () {
 
@@ -40,4 +40,13 @@ function index_menu_mobile_slide () {
         $('.jp-main-header .content .menu' ).addClass( "menu-in", 400 );
         $('.jp-main-shadow' ).fadeIn(400);
     }
+}
+
+/**
+ * Función asociada al menú en display.
+ */
+function jp_main_modal_show () {
+
+    $('.jp-main-shadow' ).fadeIn(400);
+    $('.jp-main-modal' ).fadeIn(600);
 }
